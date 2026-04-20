@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 
+import type { TaskOutcome } from '@/agent/domain/TaskOutcome'
+import { buildActiveCommerceContext } from '@/commerce/application/context/buildActiveCommerceContext'
+import {
+	type CommerceConversationContext,
+	updateCommerceConversationContext,
+} from '@/commerce/application/context/updateCommerceConversationContext'
 import { captureCurrentProduct } from '@/commerce/application/use-cases/captureCurrentProduct'
 import { CurrentPageRuntime } from '@/commerce/runtime/page/CurrentPageRuntime'
+import { serializeActiveCommerceContext } from '@/commerce/runtime/prompt/serializeActiveCommerceContext'
 import { useCommerceState } from '@/commerce/state'
 
 export function useCommerceAgent() {
@@ -9,6 +16,7 @@ export function useCommerceAgent() {
 	const [isLoading, setIsLoading] = useState(false)
 	const runtimeRef = useRef<CurrentPageRuntime | null>(null)
 	const latestUrlRef = useRef<string | null>(null)
+	const conversationContextRef = useRef<CommerceConversationContext>({ messages: [], outcomes: [] })
 
 	if (!runtimeRef.current) {
 		runtimeRef.current = new CurrentPageRuntime()
@@ -67,5 +75,38 @@ export function useCommerceAgent() {
 	return {
 		...state,
 		isLoading,
+		buildTaskContextPrompt: async () => {
+			const runtime = runtimeRef.current
+			if (!runtime) return ''
+
+			const currentPage = await runtime.getCurrentPageContext()
+			const context = buildActiveCommerceContext({
+				currentPage,
+				activeResultCard: state.activeResultCard,
+				recentConversationMessages:
+					conversationContextRef.current.scopeKey === currentPage.url
+						? conversationContextRef.current.messages
+						: undefined,
+				recentTaskOutcomes:
+					conversationContextRef.current.scopeKey === currentPage.url
+						? conversationContextRef.current.outcomes
+						: undefined,
+			})
+
+			return serializeActiveCommerceContext(context)
+		},
+		recordTaskOutcome: async (taskOutcome: TaskOutcome) => {
+			const runtime = runtimeRef.current
+			if (!runtime || !taskOutcome.userIntent.trim() || !taskOutcome.resultText.trim()) return
+
+			const currentPage = await runtime.getCurrentPageContext()
+			conversationContextRef.current = updateCommerceConversationContext(
+				conversationContextRef.current,
+				{
+					scopeKey: currentPage.url,
+					taskOutcome,
+				}
+			)
+		},
 	}
 }

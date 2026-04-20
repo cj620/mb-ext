@@ -1,12 +1,20 @@
 import { History, Send, Settings, Square } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import { buildTaskOutcome } from '@/agent/application/buildTaskOutcome'
+import { createConversationMessagesFromTaskOutcome } from '@/agent/application/createConversationMessagesFromTaskOutcome'
+import { mergeConversationMessagePages } from '@/agent/application/mergeConversationMessagePages'
+import { upsertConversationMessage } from '@/agent/application/upsertConversationMessage'
+import type { ConversationRecord } from '@/agent/domain/Conversation'
+import type { ConversationMessageRecord } from '@/agent/domain/ConversationMessage'
+import { resolveCommerceTaskRoute } from '@/commerce/features/resolveCommerceTaskRoute'
 import { useCommerceAgent } from '@/commerce/features/useCommerceAgent'
 import { ResultCardDock } from '@/commerce/ui'
+import { canRenderResultCardDock } from '@/commerce/ui/dock/ResultCardDock'
 import { ConfigPanel } from '@/components/ConfigPanel'
-import { HistoryDetail } from '@/components/HistoryDetail'
+import { ConversationTimeline } from '@/components/ConversationTimeline'
 import { HistoryList } from '@/components/HistoryList'
-import { ActivityCard, EventCard } from '@/components/cards'
+import { ActivityCard } from '@/components/cards'
 import { EmptyState, Logo, MotionOverlay, StatusDot } from '@/components/misc'
 import { Button } from '@/components/ui/button'
 import {
@@ -15,63 +23,239 @@ import {
 	InputGroupButton,
 	InputGroupTextarea,
 } from '@/components/ui/input-group'
-import { saveSession } from '@/lib/db'
+import {
+	getConversation,
+	getOrCreateLatestConversation,
+	listConversationMessagesPage,
+	saveConversationMessages,
+	saveSession,
+} from '@/lib/db'
 
 import { useAgent } from '../../agent/useAgent'
 
-type View =
-	| { name: 'chat' }
-	| { name: 'config' }
-	| { name: 'history' }
-	| { name: 'history-detail'; sessionId: string }
+const CONVERSATION_PAGE_SIZE = 100
+
+type View = { name: 'chat' } | { name: 'config' } | { name: 'history' }
 
 export default function App() {
 	const [view, setView] = useState<View>({ name: 'chat' })
 	const [inputValue, setInputValue] = useState('')
+	const [activeConversation, setActiveConversation] = useState<ConversationRecord | null>(null)
+	const [conversationMessages, setConversationMessages] = useState<ConversationMessageRecord[]>([])
+	const [hasOlderConversationMessages, setHasOlderConversationMessages] = useState(false)
+	const [oldestLoadedMessageCreatedAt, setOldestLoadedMessageCreatedAt] = useState<
+		number | undefined
+	>()
 	const historyRef = useRef<HTMLDivElement>(null)
+	const skipAutoScrollRef = useRef(false)
 	const textareaRef = useRef<HTMLTextAreaElement>(null)
 
-	const { status, history, activity, currentTask, config, execute, stop, configure } = useAgent()
+	const { status, activity, config, execute, stop, configure } = useAgent()
 	const commerceState = useCommerceAgent()
 
-	// Persist session when task finishes
-	const prevStatusRef = useRef(status)
 	useEffect(() => {
-		const prev = prevStatusRef.current
-		prevStatusRef.current = status
+		let cancelled = false
 
-		if (
-			prev === 'running' &&
-			(status === 'completed' || status === 'error') &&
-			history.length > 0 &&
-			currentTask
-		) {
-			saveSession({ task: currentTask, history, status }).catch((err) =>
-				console.error('[SidePanel] Failed to save session:', err)
-			)
+		const loadConversation = async () => {
+			try {
+				const conversation = await getOrCreateLatestConversation()
+				const page = await listConversationMessagesPage(conversation.id, {
+					limit: CONVERSATION_PAGE_SIZE,
+				})
+				if (!cancelled) {
+					setActiveConversation(conversation)
+					setConversationMessages(page.messages)
+					setHasOlderConversationMessages(page.hasMore)
+					setOldestLoadedMessageCreatedAt(page.oldestCreatedAt)
+				}
+			} catch (error) {
+				console.error('[SidePanel] Failed to load conversation messages:', error)
+			}
 		}
-	}, [status, history, currentTask])
 
-	// Auto-scroll to bottom on new events
+		void loadConversation()
+
+		return () => {
+			cancelled = true
+		}
+	}, [])
+
 	useEffect(() => {
+		let cancelled = false
+
+		const loadMessages = async () => {
+			if (!activeConversation) return
+
+			try {
+				const page = await listConversationMessagesPage(activeConversation.id, {
+					limit: CONVERSATION_PAGE_SIZE,
+				})
+				if (!cancelled) {
+					setConversationMessages(page.messages)
+					setHasOlderConversationMessages(page.hasMore)
+					setOldestLoadedMessageCreatedAt(page.oldestCreatedAt)
+				}
+			} catch (error) {
+				console.error('[SidePanel] Failed to load active conversation messages:', error)
+			}
+		}
+
+		void loadMessages()
+
+		return () => {
+			cancelled = true
+		}
+	}, [activeConversation?.id])
+
+	useEffect(() => {
+		if (skipAutoScrollRef.current) {
+			skipAutoScrollRef.current = false
+			return
+		}
+
 		if (historyRef.current) {
 			historyRef.current.scrollTop = historyRef.current.scrollHeight
 		}
-	}, [history, activity])
+	}, [conversationMessages, activity])
 
 	const runTask = useCallback(
-		(task: string) => {
+		async (task: string) => {
 			const normalizedTask = task.trim()
-			if (!normalizedTask || status === 'running') return
+			if (!normalizedTask || status === 'running' || !activeConversation) return
 
 			setInputValue('')
 			setView({ name: 'chat' })
 
-			execute(normalizedTask).catch((error) => {
+			const pendingMessageId = `pending-${Date.now()}`
+			const streamingAssistantMessageId = `${pendingMessageId}-assistant`
+			const pendingCreatedAt = Date.now()
+			const pendingUserMessage: ConversationMessageRecord = {
+				id: pendingMessageId,
+				conversationId: activeConversation.id,
+				role: 'user',
+				content: normalizedTask,
+				createdAt: pendingCreatedAt,
+			}
+
+			setConversationMessages((prev) => [...prev, pendingUserMessage])
+			setOldestLoadedMessageCreatedAt((current) =>
+				current == null ? pendingCreatedAt : Math.min(current, pendingCreatedAt)
+			)
+
+			try {
+				const ruleNeedsContext = Boolean(commerceState.activeResultCard)
+				let contextPrompt = ''
+
+				const route = await resolveCommerceTaskRoute({
+					task: normalizedTask,
+					hasActiveProduct: Boolean(commerceState.activeResultCard),
+					contextPrompt: ruleNeedsContext
+						? ((contextPrompt = await commerceState.buildTaskContextPrompt()), contextPrompt)
+						: undefined,
+					llmConfig: config ?? undefined,
+					systemInstruction: config?.systemInstruction,
+				})
+
+				if (route.kind === 'commerce_text') {
+					if (!contextPrompt && commerceState.activeResultCard) {
+						contextPrompt = await commerceState.buildTaskContextPrompt()
+					}
+					const result = await execute(normalizedTask, {
+						displayTask: normalizedTask,
+						mode: 'commerce_text',
+						contextPrompt,
+						onTextDelta: (text) => {
+							setConversationMessages((prev) =>
+								upsertConversationMessage(prev, {
+									id: streamingAssistantMessageId,
+									conversationId: activeConversation.id,
+									role: 'assistant',
+									content: text,
+									createdAt: pendingCreatedAt + 1,
+									routeKind: 'commerce_text',
+								})
+							)
+						},
+					})
+					const persistedSession = await saveSession({
+						task: normalizedTask,
+						history: result.history,
+						status: result.success ? 'completed' : 'error',
+					})
+					const taskOutcome = buildTaskOutcome({
+						taskRunId: persistedSession.id,
+						routeKind: route.kind,
+						task: normalizedTask,
+						result,
+					})
+					const messages = createConversationMessagesFromTaskOutcome({
+						conversationId: activeConversation.id,
+						taskOutcome,
+					})
+					await saveConversationMessages(activeConversation.id, messages)
+					setConversationMessages((prev) => [
+						...prev.filter(
+							(message) =>
+								message.id !== pendingMessageId && message.id !== streamingAssistantMessageId
+						),
+						...messages,
+					])
+					setOldestLoadedMessageCreatedAt((current) =>
+						current == null ? messages[0]?.createdAt : current
+					)
+					await commerceState.recordTaskOutcome(taskOutcome)
+					return
+				}
+
+				const result = await execute(normalizedTask, {
+					displayTask: normalizedTask,
+					mode: 'page_interaction',
+				})
+				const persistedSession = await saveSession({
+					task: normalizedTask,
+					history: result.history,
+					status: result.success ? 'completed' : 'error',
+				})
+				const taskOutcome = buildTaskOutcome({
+					taskRunId: persistedSession.id,
+					routeKind: route.kind,
+					task: normalizedTask,
+					result,
+				})
+				const messages = createConversationMessagesFromTaskOutcome({
+					conversationId: activeConversation.id,
+					taskOutcome,
+				})
+				await saveConversationMessages(activeConversation.id, messages)
+				setConversationMessages((prev) => [
+					...prev.filter((message) => message.id !== pendingMessageId),
+					...messages,
+				])
+				setOldestLoadedMessageCreatedAt((current) =>
+					current == null ? messages[0]?.createdAt : current
+				)
+			} catch (error) {
+				setConversationMessages((prev) => [
+					...prev.filter(
+						(message) =>
+							message.id !== pendingMessageId && message.id !== streamingAssistantMessageId
+					),
+					{
+						id: `${pendingMessageId}-error`,
+						conversationId: activeConversation.id,
+						role: 'assistant',
+						content: String(error),
+						createdAt: pendingCreatedAt + 1,
+						taskStatus: 'error',
+					},
+				])
+				setOldestLoadedMessageCreatedAt((current) =>
+					current == null ? pendingCreatedAt : Math.min(current, pendingCreatedAt)
+				)
 				console.error('[SidePanel] Failed to execute task:', error)
-			})
+			}
 		},
-		[execute, status]
+		[activeConversation, commerceState, execute, status]
 	)
 
 	const handleSubmit = useCallback(
@@ -112,19 +296,15 @@ export default function App() {
 	if (view.name === 'history') {
 		return (
 			<HistoryList
-				onSelect={(id) => setView({ name: 'history-detail', sessionId: id })}
+				activeConversationId={activeConversation?.id}
+				onSelect={async (id) => {
+					const nextConversation =
+						activeConversation?.id === id ? activeConversation : await getConversation(id)
+					if (!nextConversation) return
+					setActiveConversation(nextConversation)
+					setView({ name: 'chat' })
+				}}
 				onBack={() => setView({ name: 'chat' })}
-				onRerun={runTask}
-			/>
-		)
-	}
-
-	if (view.name === 'history-detail') {
-		return (
-			<HistoryDetail
-				sessionId={view.sessionId}
-				onBack={() => setView({ name: 'history' })}
-				onRerun={runTask}
 			/>
 		)
 	}
@@ -132,7 +312,8 @@ export default function App() {
 	// --- Chat view ---
 
 	const isRunning = status === 'running'
-	const showEmptyState = !currentTask && history.length === 0 && !isRunning
+	const showEmptyState = conversationMessages.length === 0 && !isRunning
+	const showDock = view.name === 'chat' && canRenderResultCardDock(commerceState.activeResultCard)
 
 	return (
 		<div className="relative flex flex-col h-screen bg-background">
@@ -169,31 +350,45 @@ export default function App() {
 			</header>
 
 			{/* Content */}
-			<main className="flex-1 overflow-hidden flex flex-col">
-				{/* Current task */}
-				{currentTask && (
-					<div className="border-b px-3 py-2 bg-muted/30">
-						<div className="text-[10px] text-muted-foreground uppercase tracking-wide">Task</div>
-						<div className="text-xs font-medium truncate" title={currentTask}>
-							{currentTask}
-						</div>
-					</div>
-				)}
-
-				{/* History */}
-				<div ref={historyRef} className="flex-1 overflow-y-auto p-3 space-y-2">
+			<main className="flex-1 min-h-0 overflow-hidden flex flex-col">
+				<div ref={historyRef} className="flex-1 min-h-0 overflow-y-auto p-3 space-y-2">
 					{showEmptyState && <EmptyState />}
 
-					{history.map((event, index) => (
-						<EventCard key={index} event={event} />
-					))}
+					{hasOlderConversationMessages && activeConversation && (
+						<div className="flex justify-center">
+							<Button
+								variant="ghost"
+								size="sm"
+								onClick={async () => {
+									if (!oldestLoadedMessageCreatedAt) return
+									skipAutoScrollRef.current = true
+									const page = await listConversationMessagesPage(activeConversation.id, {
+										beforeCreatedAt: oldestLoadedMessageCreatedAt,
+										limit: CONVERSATION_PAGE_SIZE,
+									})
+									setConversationMessages((current) =>
+										mergeConversationMessagePages(page.messages, current)
+									)
+									setHasOlderConversationMessages(page.hasMore)
+									setOldestLoadedMessageCreatedAt(page.oldestCreatedAt)
+								}}
+								className="h-7 text-[11px] text-muted-foreground cursor-pointer"
+							>
+								Load older messages
+							</Button>
+						</div>
+					)}
+
+					{conversationMessages.length > 0 && (
+						<ConversationTimeline messages={conversationMessages} />
+					)}
 
 					{/* Activity indicator at bottom */}
 					{activity && <ActivityCard activity={activity} />}
 				</div>
 			</main>
 
-			{view.name === 'chat' && commerceState.activeResultCard && (
+			{showDock && (
 				<section className="border-t px-3 py-2">
 					<ResultCardDock activeCard={commerceState.activeResultCard} />
 				</section>
@@ -228,7 +423,7 @@ export default function App() {
 								size="icon-sm"
 								variant="default"
 								onClick={() => handleSubmit()}
-								disabled={!inputValue.trim()}
+								disabled={!inputValue.trim() || !activeConversation}
 								className="size-7 cursor-pointer"
 								aria-label="Send"
 								title="Send"

@@ -11,6 +11,8 @@ import type {
 import type { LLMConfig } from '@page-agent/llms'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import { executeCommerceTextTask } from '@/commerce/runtime/text/executeCommerceTextTask'
+
 import { MultiPageAgent } from './MultiPageAgent'
 import { DEMO_CONFIG, migrateLegacyEndpoint } from './constants'
 
@@ -35,13 +37,22 @@ export interface UseAgentResult {
 	activity: AgentActivity | null
 	currentTask: string
 	config: ExtConfig | null
-	execute: (task: string) => Promise<ExecutionResult>
+	execute: (
+		task: string,
+		options?: {
+			displayTask?: string
+			mode?: 'page_interaction' | 'commerce_text'
+			contextPrompt?: string
+			onTextDelta?: (text: string) => void
+		}
+	) => Promise<ExecutionResult>
 	stop: () => void
 	configure: (config: ExtConfig) => Promise<void>
 }
 
 export function useAgent(): UseAgentResult {
 	const agentRef = useRef<MultiPageAgent | null>(null)
+	const textAbortControllerRef = useRef<AbortController | null>(null)
 	const [status, setStatus] = useState<AgentStatus>('idle')
 	const [history, setHistory] = useState<HistoricalEvent[]>([])
 	const [activity, setActivity] = useState<AgentActivity | null>(null)
@@ -106,17 +117,78 @@ export function useAgent(): UseAgentResult {
 		}
 	}, [config])
 
-	const execute = useCallback(async (task: string) => {
-		const agent = agentRef.current
-		console.log('🚀 [useAgent] start executing task:', task)
-		if (!agent) throw new Error('Agent not initialized')
+	const execute = useCallback(
+		async (
+			task: string,
+			options?: {
+				displayTask?: string
+				mode?: 'page_interaction' | 'commerce_text'
+				contextPrompt?: string
+				onTextDelta?: (text: string) => void
+			}
+		) => {
+			const agent = agentRef.current
+			console.log('🚀 [useAgent] start executing task:', task)
+			if (!agent || !config) throw new Error('Agent not initialized')
 
-		setCurrentTask(task)
-		setHistory([])
-		return agent.execute(task)
-	}, [])
+			const mode = options?.mode ?? 'page_interaction'
+
+			setCurrentTask(options?.displayTask ?? task)
+			setHistory([])
+
+			if (mode === 'commerce_text') {
+				textAbortControllerRef.current?.abort()
+				const abortController = new AbortController()
+				textAbortControllerRef.current = abortController
+
+				setStatus('running')
+				setActivity({ type: 'thinking' })
+
+				try {
+					const result = await executeCommerceTextTask(
+						{
+							task,
+							contextPrompt: options?.contextPrompt,
+							llmConfig: config,
+							systemInstruction: config.systemInstruction,
+							onTextDelta: options?.onTextDelta,
+						},
+						{
+							abortSignal: abortController.signal,
+						}
+					)
+
+					setHistory(result.history)
+					setActivity(null)
+					setStatus(result.success ? 'completed' : 'error')
+					return result
+				} catch (error) {
+					const message = abortController.signal.aborted ? 'Task stopped' : String(error)
+					const errorHistory: HistoricalEvent[] = [{ type: 'error', message, rawResponse: error }]
+
+					setHistory(errorHistory)
+					setActivity(null)
+					setStatus('error')
+
+					return {
+						success: false,
+						data: message,
+						history: errorHistory,
+					}
+				} finally {
+					if (textAbortControllerRef.current === abortController) {
+						textAbortControllerRef.current = null
+					}
+				}
+			}
+
+			return agent.execute(task)
+		},
+		[config]
+	)
 
 	const stop = useCallback(() => {
+		textAbortControllerRef.current?.abort()
 		agentRef.current?.stop()
 	}, [])
 

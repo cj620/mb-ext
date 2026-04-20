@@ -1,4 +1,5 @@
 export type { SourcePlatform } from './SourcePlatform'
+export type { ActiveCommerceContext } from './ActiveCommerceContext'
 export type { ConversationMessage, ConversationMessageRole } from './ConversationMessage'
 export type {
 	ErrorReportCardDetail,

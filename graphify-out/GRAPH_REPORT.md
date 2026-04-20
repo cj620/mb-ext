@@ -1,12 +1,12 @@
 # Graph Report - /Users/mima0000/Desktop/AI/page-agent  (2026-04-20)
 
 ## Corpus Check
-- 189 files · ~90,093 words
+- 221 files · ~97,011 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 730 nodes · 822 edges · 175 communities detected
-- Extraction: 82% EXTRACTED · 18% INFERRED · 0% AMBIGUOUS · INFERRED: 144 edges (avg confidence: 0.8)
+- 800 nodes · 903 edges · 190 communities detected
+- Extraction: 83% EXTRACTED · 17% INFERRED · 0% AMBIGUOUS · INFERRED: 151 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -185,18 +185,33 @@
 - [[_COMMUNITY_Community 172|Community 172]]
 - [[_COMMUNITY_Community 173|Community 173]]
 - [[_COMMUNITY_Community 174|Community 174]]
+- [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 176|Community 176]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 179|Community 179]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
+- [[_COMMUNITY_Community 184|Community 184]]
+- [[_COMMUNITY_Community 185|Community 185]]
+- [[_COMMUNITY_Community 186|Community 186]]
+- [[_COMMUNITY_Community 187|Community 187]]
+- [[_COMMUNITY_Community 188|Community 188]]
+- [[_COMMUNITY_Community 189|Community 189]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Panel` - 33 edges
 2. `RemotePageController` - 19 edges
 3. `PageController` - 18 edges
 4. `PageAgentCore` - 17 edges
-5. `TabsController` - 13 edges
-6. `HubWs` - 11 edges
-7. `useLanguage()` - 11 edges
-8. `God Nodes` - 11 edges
-9. `waitFor()` - 10 edges
-10. `buildDomTree()` - 10 edges
+5. `getDB()` - 14 edges
+6. `TabsController` - 13 edges
+7. `HubWs` - 11 edges
+8. `useLanguage()` - 11 edges
+9. `God Nodes` - 11 edges
+10. `waitFor()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Bring Your Own LLMs` --semantically_similar_to--> `BYOK Architecture`  [INFERRED] [semantically similar]
@@ -221,40 +236,40 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.07
-Nodes (10): createCard(), createReflectionLines(), escapeHtml(), highlightSyntax(), HighlightSyntaxClient(), I18n, handleGlobalPointerOut(), handleVisibility() (+2 more)
+Cohesion: 0.05
+Nodes (16): createCard(), createReflectionLines(), handleExecute(), escapeHtml(), highlightSyntax(), HighlightSyntaxClient(), I18n, truncate() (+8 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.07
-Nodes (31): blurLastClickedElement(), clickElement(), getElementByIndex(), inputTextElement(), scrollHorizontally(), scrollIntoViewIfNeeded(), scrollVertically(), selectOptionElement() (+23 more)
-
-### Community 2 - "Community 2"
 Cohesion: 0.06
 Nodes (45): Core Package, DOM Pipeline, LLMs Package, npm Workspaces Monorepo, Page Agent Package, Page Controller Package, Rationale: Async Isolated Module Boundaries, Source-First Publish Workflow (+37 more)
 
-### Community 3 - "Community 3"
+### Community 2 - "Community 2"
 Cohesion: 0.1
 Nodes (8): handlePageControlMessage(), isContentScriptAllowed(), RemotePageController, sendMessage(), randomColor(), sendMessage(), TabsController, waitUntil()
 
+### Community 3 - "Community 3"
+Cohesion: 0.08
+Nodes (13): getPageInfo(), cleanUpHighlights(), fetchLlmsTxt(), flatTreeToString(), getElementTextMap(), getFlatTree(), getSelectorMap(), globToRegex() (+5 more)
+
 ### Community 4 - "Community 4"
-Cohesion: 0.13
-Nodes (6): cleanUpHighlights(), fetchLlmsTxt(), randomID(), truncate(), uid(), PageAgentCore
+Cohesion: 0.1
+Nodes (22): blurLastClickedElement(), clickElement(), getElementByIndex(), inputTextElement(), scrollHorizontally(), scrollIntoViewIfNeeded(), scrollVertically(), selectOptionElement() (+14 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.1
-Nodes (7): hasDarkModeClass(), isBackgroundDark(), isColorDark(), isPageDark(), parseRgbColor(), HubBridge, SimulatorMask
+Nodes (24): App(), async(), clearConversations(), clearSessions(), createConversation(), deleteConversation(), deleteSession(), getConversation() (+16 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.12
-Nodes (12): normalizeResponse(), retrieveJsonFromString(), safeJsonParse(), validateAction(), handleExecute(), execute(), getId(), stop() (+4 more)
+Cohesion: 0.1
+Nodes (14): normalizeResponse(), retrieveJsonFromString(), safeJsonParse(), validateAction(), buildMessages(), executeCommerceTextTask(), OpenAIClient, buildMessages() (+6 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.21
-Nodes (20): addExtraData(), buildDomTree(), getCachedBoundingRect(), getCachedClientRects(), getCachedComputedStyle(), getElementPosition(), getXPathTree(), handleHighlighting() (+12 more)
+Cohesion: 0.1
+Nodes (7): hasDarkModeClass(), isBackgroundDark(), isColorDark(), isPageDark(), parseRgbColor(), HubBridge, SimulatorMask
 
 ### Community 8 - "Community 8"
-Cohesion: 0.16
-Nodes (14): clearSessions(), deleteSession(), getDB(), getSession(), listSessions(), saveSession(), buildHistoryExportFilename(), downloadHistoryExport() (+6 more)
+Cohesion: 0.21
+Nodes (20): addExtraData(), buildDomTree(), getCachedBoundingRect(), getCachedClientRects(), getCachedComputedStyle(), getElementPosition(), getXPathTree(), handleHighlighting() (+12 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.11
@@ -285,60 +300,60 @@ Cohesion: 0.5
 Nodes (7): extractAmazonProduct(), extractAsin(), extractBulletPoints(), extractCategoryPath(), queryFirstText(), queryImage(), textContent()
 
 ### Community 16 - "Community 16"
-Cohesion: 0.25
-Nodes (4): App(), useAgent(), useCommerceAgent(), useCommerceState()
-
-### Community 17 - "Community 17"
 Cohesion: 0.29
 Nodes (3): initCommerceRuntime(), main(), initPageController()
 
+### Community 17 - "Community 17"
+Cohesion: 0.48
+Nodes (5): renderActiveResultCard(), renderCurrentPage(), renderRecentConversation(), renderRecentTaskOutcomes(), serializeActiveCommerceContext()
+
 ### Community 18 - "Community 18"
+Cohesion: 0.52
+Nodes (6): buildHistoryExportFilename(), downloadHistoryExport(), formatTimestampForFilename(), pad(), sanitizeTaskForFilename(), serializeHistoryExport()
+
+### Community 19 - "Community 19"
 Cohesion: 0.29
 Nodes (7): Community Hubs Navigation, Corpus Check, Rationale: Corpus Large Enough For Graph Structure, Graph Report, Hyperedges Section, Graph Summary Metrics, Surprising Connections
 
-### Community 19 - "Community 19"
+### Community 20 - "Community 20"
 Cohesion: 0.4
 Nodes (3): detectLanguage(), MultiPageAgent, createTabTools()
 
-### Community 20 - "Community 20"
+### Community 21 - "Community 21"
 Cohesion: 0.33
 Nodes (0): 
 
-### Community 21 - "Community 21"
+### Community 22 - "Community 22"
 Cohesion: 0.47
 Nodes (3): LLM, parseLLMConfig(), withRetry()
 
-### Community 22 - "Community 22"
+### Community 23 - "Community 23"
 Cohesion: 0.47
 Nodes (6): Adaptive Drop Shadow, Right Pointing Cursor Shape, Cursor Fill SVG Asset, Automation Cursor Visual Affordance, White Cursor Fill, Page Controller Simulator Mask Feedback
 
-### Community 23 - "Community 23"
+### Community 24 - "Community 24"
 Cohesion: 0.4
 Nodes (1): ErrorBoundary
 
-### Community 24 - "Community 24"
+### Community 25 - "Community 25"
 Cohesion: 0.4
 Nodes (2): toggle(), syncDarkMode()
 
-### Community 25 - "Community 25"
+### Community 26 - "Community 26"
 Cohesion: 0.4
 Nodes (5): Website Sitemap, Rationale: GitHub Pages SPA Route Copies, shadcn/ui Preference, SPA Routes for GitHub Pages, wouter Base Path Routing
 
-### Community 26 - "Community 26"
+### Community 27 - "Community 27"
 Cohesion: 0.5
 Nodes (5): page-agent-256.webp Image Asset, Page Agent Brand Mark, Page Agent Extension Icon, Multicolor Gradient Visual Identity, White Forward Chevron Motif
 
-### Community 27 - "Community 27"
+### Community 28 - "Community 28"
 Cohesion: 0.6
 Nodes (5): Light Dark Stroke Adaptation, Pointer Cursor Outline, Cursor Border SVG Asset, Page Controller Automation Feedback, Page Controller Simulator Mask
 
-### Community 28 - "Community 28"
-Cohesion: 0.5
-Nodes (0): 
-
 ### Community 29 - "Community 29"
-Cohesion: 0.5
-Nodes (0): 
+Cohesion: 0.67
+Nodes (2): resolveCommerceTaskRoute(), toResolvedRuleRoute()
 
 ### Community 30 - "Community 30"
 Cohesion: 0.5
@@ -349,80 +364,80 @@ Cohesion: 0.5
 Nodes (0): 
 
 ### Community 32 - "Community 32"
-Cohesion: 0.83
-Nodes (3): hexToRgb(), MousePosition(), Particles()
+Cohesion: 0.5
+Nodes (0): 
 
 ### Community 33 - "Community 33"
 Cohesion: 0.5
-Nodes (2): HomePage(), useDocumentTitle()
+Nodes (0): 
 
 ### Community 34 - "Community 34"
+Cohesion: 0.67
+Nodes (2): buildTaskOutcome(), normalizeFacts()
+
+### Community 35 - "Community 35"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 35 - "Community 35"
-Cohesion: 0.67
-Nodes (1): InvokeError
-
 ### Community 36 - "Community 36"
-Cohesion: 0.67
-Nodes (4): Page Agent Gradient Brand Mark, Page Agent Browser Extension Icon, Page Agent 64px Image Asset, Colorful Page Agent UI Identity
+Cohesion: 0.5
+Nodes (0): 
 
 ### Community 37 - "Community 37"
-Cohesion: 0.67
-Nodes (4): Page Agent Gradient Brand Mark, Page Agent Extension Icon, Page Agent 64px Image Asset, Bright Geometric Page Agent Visual Identity
+Cohesion: 0.5
+Nodes (0): 
 
 ### Community 38 - "Community 38"
-Cohesion: 0.67
+Cohesion: 0.5
 Nodes (0): 
 
 ### Community 39 - "Community 39"
-Cohesion: 1.0
-Nodes (2): isInternalPackage(), updateInternalDeps()
+Cohesion: 0.83
+Nodes (3): hexToRgb(), MousePosition(), Particles()
 
 ### Community 40 - "Community 40"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.5
+Nodes (2): HomePage(), useDocumentTitle()
 
 ### Community 41 - "Community 41"
-Cohesion: 1.0
-Nodes (2): inferCompleteness(), normalizeAmazonProduct()
+Cohesion: 0.5
+Nodes (0): 
 
 ### Community 42 - "Community 42"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (1): InvokeError
 
 ### Community 43 - "Community 43"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (4): Page Agent Gradient Brand Mark, Page Agent Browser Extension Icon, Page Agent 64px Image Asset, Colorful Page Agent UI Identity
 
 ### Community 44 - "Community 44"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (4): Page Agent Gradient Brand Mark, Page Agent Extension Icon, Page Agent 64px Image Asset, Bright Geometric Page Agent Visual Identity
 
 ### Community 45 - "Community 45"
 Cohesion: 0.67
-Nodes (1): TypingAnimation()
+Nodes (0): 
 
 ### Community 46 - "Community 46"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 1.0
+Nodes (2): isInternalPackage(), updateInternalDeps()
 
 ### Community 47 - "Community 47"
 Cohesion: 0.67
-Nodes (1): Separator()
+Nodes (0): 
 
 ### Community 48 - "Community 48"
-Cohesion: 0.67
-Nodes (1): cn()
+Cohesion: 1.0
+Nodes (2): canRenderResultCardDock(), ResultCardDock()
 
 ### Community 49 - "Community 49"
 Cohesion: 0.67
-Nodes (1): Spinner()
+Nodes (0): 
 
 ### Community 50 - "Community 50"
-Cohesion: 0.67
-Nodes (1): cn()
+Cohesion: 1.0
+Nodes (2): inferCompleteness(), normalizeAmazonProduct()
 
 ### Community 51 - "Community 51"
 Cohesion: 0.67
@@ -442,7 +457,7 @@ Nodes (0):
 
 ### Community 55 - "Community 55"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (1): TypingAnimation()
 
 ### Community 56 - "Community 56"
 Cohesion: 0.67
@@ -450,67 +465,67 @@ Nodes (0):
 
 ### Community 57 - "Community 57"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (1): Separator()
 
 ### Community 58 - "Community 58"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (1): cn()
 
 ### Community 59 - "Community 59"
 Cohesion: 0.67
-Nodes (1): PageAgent
+Nodes (1): Spinner()
 
 ### Community 60 - "Community 60"
 Cohesion: 0.67
-Nodes (0): 
+Nodes (1): cn()
 
 ### Community 61 - "Community 61"
 Cohesion: 0.67
-Nodes (3): Multi-Tab Browser State Prompt, Optional Chrome Extension, readme_chrome_extension
+Nodes (0): 
 
 ### Community 62 - "Community 62"
 Cohesion: 0.67
-Nodes (3): DOM Pipeline, npm Workspaces Monorepo, Rationale: Async Isolated Module Boundaries
+Nodes (0): 
 
 ### Community 63 - "Community 63"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 64 - "Community 64"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 65 - "Community 65"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 66 - "Community 66"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 67 - "Community 67"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 68 - "Community 68"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 69 - "Community 69"
-Cohesion: 1.0
-Nodes (0): 
+Cohesion: 0.67
+Nodes (1): PageAgent
 
 ### Community 70 - "Community 70"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 71 - "Community 71"
-Cohesion: 1.0
-Nodes (0): 
+Cohesion: 0.67
+Nodes (3): Multi-Tab Browser State Prompt, Optional Chrome Extension, readme_chrome_extension
 
 ### Community 72 - "Community 72"
-Cohesion: 1.0
-Nodes (0): 
+Cohesion: 0.67
+Nodes (3): DOM Pipeline, npm Workspaces Monorepo, Rationale: Async Isolated Module Boundaries
 
 ### Community 73 - "Community 73"
 Cohesion: 1.0
@@ -566,19 +581,19 @@ Nodes (0):
 
 ### Community 86 - "Community 86"
 Cohesion: 1.0
-Nodes (2): Keep a Changelog, Semantic Versioning
+Nodes (0): 
 
 ### Community 87 - "Community 87"
 Cohesion: 1.0
-Nodes (1): AGENTS.md
+Nodes (0): 
 
 ### Community 88 - "Community 88"
 Cohesion: 1.0
-Nodes (2): Bring Your Own LLMs, BYOK Architecture
+Nodes (0): 
 
 ### Community 89 - "Community 89"
 Cohesion: 1.0
-Nodes (2): Page Agent, Page Agent Chinese README
+Nodes (0): 
 
 ### Community 90 - "Community 90"
 Cohesion: 1.0
@@ -586,19 +601,19 @@ Nodes (0):
 
 ### Community 91 - "Community 91"
 Cohesion: 1.0
-Nodes (2): Client-Side Web Enhancement, execute_task MCP Tool
+Nodes (0): 
 
 ### Community 92 - "Community 92"
 Cohesion: 1.0
-Nodes (2): agents_source_first_publish_workflow, Source-First Publish Workflow
+Nodes (0): 
 
 ### Community 93 - "Community 93"
 Cohesion: 1.0
-Nodes (2): Private Vulnerability Reporting, Rationale: Avoid Public Exploit Details
+Nodes (0): 
 
 ### Community 94 - "Community 94"
 Cohesion: 1.0
-Nodes (2): Rationale: GitHub Pages SPA Route Copies, SPA Routes for GitHub Pages
+Nodes (0): 
 
 ### Community 95 - "Community 95"
 Cohesion: 1.0
@@ -606,19 +621,19 @@ Nodes (0):
 
 ### Community 96 - "Community 96"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Keep a Changelog, Semantic Versioning
 
 ### Community 97 - "Community 97"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (1): AGENTS.md
 
 ### Community 98 - "Community 98"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Bring Your Own LLMs, BYOK Architecture
 
 ### Community 99 - "Community 99"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Page Agent, Page Agent Chinese README
 
 ### Community 100 - "Community 100"
 Cohesion: 1.0
@@ -626,19 +641,19 @@ Nodes (0):
 
 ### Community 101 - "Community 101"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Client-Side Web Enhancement, execute_task MCP Tool
 
 ### Community 102 - "Community 102"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): agents_source_first_publish_workflow, Source-First Publish Workflow
 
 ### Community 103 - "Community 103"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Private Vulnerability Reporting, Rationale: Avoid Public Exploit Details
 
 ### Community 104 - "Community 104"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Rationale: GitHub Pages SPA Route Copies, SPA Routes for GitHub Pages
 
 ### Community 105 - "Community 105"
 Cohesion: 1.0
@@ -878,290 +893,360 @@ Nodes (0):
 
 ### Community 164 - "Community 164"
 Cohesion: 1.0
-Nodes (1): agents_dom_pipeline
+Nodes (0): 
 
 ### Community 165 - "Community 165"
 Cohesion: 1.0
-Nodes (1): agents_page_controller_package
+Nodes (0): 
 
 ### Community 166 - "Community 166"
 Cohesion: 1.0
-Nodes (1): agents_llms_package
+Nodes (0): 
 
 ### Community 167 - "Community 167"
 Cohesion: 1.0
-Nodes (1): core_prompt_indexed_interactions
+Nodes (0): 
 
 ### Community 168 - "Community 168"
 Cohesion: 1.0
-Nodes (1): mcp_mcp_server
+Nodes (0): 
 
 ### Community 169 - "Community 169"
 Cohesion: 1.0
-Nodes (1): mcp_launcher_page
+Nodes (0): 
 
 ### Community 170 - "Community 170"
 Cohesion: 1.0
-Nodes (1): mcp_websocket_hub
+Nodes (0): 
 
 ### Community 171 - "Community 171"
 Cohesion: 1.0
-Nodes (1): agents_monorepo_workspaces
+Nodes (0): 
 
 ### Community 172 - "Community 172"
 Cohesion: 1.0
-Nodes (1): developer_guide_local_development
+Nodes (0): 
 
 ### Community 173 - "Community 173"
 Cohesion: 1.0
-Nodes (1): Testing API Extension
+Nodes (0): 
 
 ### Community 174 - "Community 174"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 175 - "Community 175"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 176 - "Community 176"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 177 - "Community 177"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 178 - "Community 178"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 179 - "Community 179"
+Cohesion: 1.0
+Nodes (1): agents_dom_pipeline
+
+### Community 180 - "Community 180"
+Cohesion: 1.0
+Nodes (1): agents_page_controller_package
+
+### Community 181 - "Community 181"
+Cohesion: 1.0
+Nodes (1): agents_llms_package
+
+### Community 182 - "Community 182"
+Cohesion: 1.0
+Nodes (1): core_prompt_indexed_interactions
+
+### Community 183 - "Community 183"
+Cohesion: 1.0
+Nodes (1): mcp_mcp_server
+
+### Community 184 - "Community 184"
+Cohesion: 1.0
+Nodes (1): mcp_launcher_page
+
+### Community 185 - "Community 185"
+Cohesion: 1.0
+Nodes (1): mcp_websocket_hub
+
+### Community 186 - "Community 186"
+Cohesion: 1.0
+Nodes (1): agents_monorepo_workspaces
+
+### Community 187 - "Community 187"
+Cohesion: 1.0
+Nodes (1): developer_guide_local_development
+
+### Community 188 - "Community 188"
+Cohesion: 1.0
+Nodes (1): Testing API Extension
+
+### Community 189 - "Community 189"
 Cohesion: 1.0
 Nodes (1): SPA GitHub Pages
 
 ## Knowledge Gaps
 - **68 isolated node(s):** `Text-Based DOM Manipulation`, `Free Testing LLM API`, `MIT License`, `AI Coding Restriction for Core and Extension`, `Rationale: Contributors Author What They Commit` (+63 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 63`** (2 nodes): `parallelTask()`, `parallel-task.js`
+- **Thin community `Community 73`** (2 nodes): `parallelTask()`, `parallel-task.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 64`** (2 nodes): `createMotion()`, `createMotion.ts`
+- **Thin community `Community 74`** (2 nodes): `createMotion()`, `createMotion.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 65`** (2 nodes): `tool()`, `index.ts`
+- **Thin community `Community 75`** (2 nodes): `tool()`, `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 66`** (2 nodes): `ResultCardDock()`, `ResultCardDock.tsx`
+- **Thin community `Community 76`** (2 nodes): `buildActiveCommerceContext()`, `buildActiveCommerceContext.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 67`** (2 nodes): `getActivityInfo()`, `cards.tsx`
+- **Thin community `Community 77`** (2 nodes): `getActivityInfo()`, `cards.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 68`** (2 nodes): `cn()`, `field.tsx`
+- **Thin community `Community 78`** (2 nodes): `cn()`, `field.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 69`** (2 nodes): `Label()`, `label.tsx`
+- **Thin community `Community 79`** (2 nodes): `Label()`, `label.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 70`** (2 nodes): `cn()`, `textarea.tsx`
+- **Thin community `Community 80`** (2 nodes): `cn()`, `textarea.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 71`** (2 nodes): `Input()`, `input.tsx`
+- **Thin community `Community 81`** (2 nodes): `Input()`, `input.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 72`** (2 nodes): `openOrFocusHubTab()`, `background.ts`
+- **Thin community `Community 82`** (2 nodes): `openOrFocusHubTab()`, `background.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 73`** (2 nodes): `vite.config.js`, `spaRoutes()`
+- **Thin community `Community 83`** (2 nodes): `vite.config.js`, `spaRoutes()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 74`** (2 nodes): `Heading()`, `Heading.tsx`
+- **Thin community `Community 84`** (2 nodes): `Heading()`, `Heading.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 75`** (2 nodes): `Marquee()`, `marquee.tsx`
+- **Thin community `Community 85`** (2 nodes): `Marquee()`, `marquee.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 76`** (2 nodes): `TooltipContent()`, `tooltip.tsx`
+- **Thin community `Community 86`** (2 nodes): `TooltipContent()`, `tooltip.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 77`** (2 nodes): `cn()`, `animated-gradient-text.tsx`
+- **Thin community `Community 87`** (2 nodes): `cn()`, `animated-gradient-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 78`** (2 nodes): `cn()`, `kbd.tsx`
+- **Thin community `Community 88`** (2 nodes): `cn()`, `kbd.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 79`** (2 nodes): `NeonGradientCard()`, `neon-gradient-card.tsx`
+- **Thin community `Community 89`** (2 nodes): `NeonGradientCard()`, `neon-gradient-card.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 80`** (2 nodes): `Badge()`, `badge.tsx`
+- **Thin community `Community 90`** (2 nodes): `Badge()`, `badge.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 81`** (2 nodes): `TextAnimateBase()`, `text-animate.tsx`
+- **Thin community `Community 91`** (2 nodes): `TextAnimateBase()`, `text-animate.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 82`** (2 nodes): `AnimatedShinyText()`, `animated-shiny-text.tsx`
+- **Thin community `Community 92`** (2 nodes): `AnimatedShinyText()`, `animated-shiny-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 83`** (2 nodes): `Highlighter()`, `highlighter.tsx`
+- **Thin community `Community 93`** (2 nodes): `Highlighter()`, `highlighter.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 84`** (2 nodes): `BlurFade()`, `blur-fade.tsx`
+- **Thin community `Community 94`** (2 nodes): `BlurFade()`, `blur-fade.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 85`** (2 nodes): `McpServerPage()`, `page.tsx`
+- **Thin community `Community 95`** (2 nodes): `McpServerPage()`, `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 86`** (2 nodes): `Keep a Changelog`, `Semantic Versioning`
+- **Thin community `Community 96`** (2 nodes): `Keep a Changelog`, `Semantic Versioning`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 87`** (2 nodes): `AGENTS.md`, `CLAUDE.md`
+- **Thin community `Community 97`** (2 nodes): `AGENTS.md`, `CLAUDE.md`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 88`** (2 nodes): `Bring Your Own LLMs`, `BYOK Architecture`
+- **Thin community `Community 98`** (2 nodes): `Bring Your Own LLMs`, `BYOK Architecture`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 89`** (2 nodes): `Page Agent`, `Page Agent Chinese README`
+- **Thin community `Community 99`** (2 nodes): `Page Agent`, `Page Agent Chinese README`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 90`** (2 nodes): `createCard()`, `escapeHtml()`
+- **Thin community `Community 100`** (2 nodes): `createCard()`, `escapeHtml()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 91`** (2 nodes): `Client-Side Web Enhancement`, `execute_task MCP Tool`
+- **Thin community `Community 101`** (2 nodes): `Client-Side Web Enhancement`, `execute_task MCP Tool`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 92`** (2 nodes): `agents_source_first_publish_workflow`, `Source-First Publish Workflow`
+- **Thin community `Community 102`** (2 nodes): `agents_source_first_publish_workflow`, `Source-First Publish Workflow`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 93`** (2 nodes): `Private Vulnerability Reporting`, `Rationale: Avoid Public Exploit Details`
+- **Thin community `Community 103`** (2 nodes): `Private Vulnerability Reporting`, `Rationale: Avoid Public Exploit Details`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 94`** (2 nodes): `Rationale: GitHub Pages SPA Route Copies`, `SPA Routes for GitHub Pages`
+- **Thin community `Community 104`** (2 nodes): `Rationale: GitHub Pages SPA Route Copies`, `SPA Routes for GitHub Pages`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 95`** (1 nodes): `eslint.config.js`
+- **Thin community `Community 105`** (1 nodes): `eslint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 96`** (1 nodes): `build.js`
+- **Thin community `Community 106`** (1 nodes): `build.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 97`** (1 nodes): `pre-publish.js`
+- **Thin community `Community 107`** (1 nodes): `pre-publish.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 98`** (1 nodes): `post-publish.js`
+- **Thin community `Community 108`** (1 nodes): `post-publish.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 99`** (1 nodes): `build-libs.js`
+- **Thin community `Community 109`** (1 nodes): `build-libs.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 100`** (1 nodes): `vite.config.js`
+- **Thin community `Community 110`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 101`** (1 nodes): `env.d.ts`
+- **Thin community `Community 111`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 102`** (1 nodes): `index.ts`
+- **Thin community `Community 112`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 103`** (1 nodes): `types.ts`
+- **Thin community `Community 113`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 104`** (1 nodes): `locales.ts`
+- **Thin community `Community 114`** (1 nodes): `locales.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 105`** (1 nodes): `vite.config.js`
+- **Thin community `Community 115`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 106`** (1 nodes): `env.d.ts`
+- **Thin community `Community 116`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 107`** (1 nodes): `types.ts`
+- **Thin community `Community 117`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 108`** (1 nodes): `wxt.config.js`
+- **Thin community `Community 118`** (1 nodes): `wxt.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 109`** (1 nodes): `index.ts`
+- **Thin community `Community 119`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 110`** (1 nodes): `ProductDockCard.tsx`
+- **Thin community `Community 120`** (1 nodes): `ProductDockCard.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 111`** (1 nodes): `index.ts`
+- **Thin community `Community 121`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 112`** (1 nodes): `AmazonExtractedProduct.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 113`** (1 nodes): `index.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 114`** (1 nodes): `ProductExtractor.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 115`** (1 nodes): `index.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 116`** (1 nodes): `index.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 117`** (1 nodes): `ToolContext.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 118`** (1 nodes): `ToolResultEnvelope.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 119`** (1 nodes): `ResultCardUpdate.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 120`** (1 nodes): `SourcePlatform.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 121`** (1 nodes): `ConversationMessage.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 122`** (1 nodes): `ResultCard.ts`
+- **Thin community `Community 122`** (1 nodes): `AmazonExtractedProduct.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 123`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 124`** (1 nodes): `ResultCardType.ts`
+- **Thin community `Community 124`** (1 nodes): `ProductExtractor.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 125`** (1 nodes): `NormalizedProductSnapshot.ts`
+- **Thin community `Community 125`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 126`** (1 nodes): `globals.d.ts`
+- **Thin community `Community 126`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 127`** (1 nodes): `markdown.d.ts`
+- **Thin community `Community 127`** (1 nodes): `ToolContext.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 128`** (1 nodes): `assets.d.ts`
+- **Thin community `Community 128`** (1 nodes): `ToolResultEnvelope.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 129`** (1 nodes): `HistoryDetail.tsx`
+- **Thin community `Community 129`** (1 nodes): `ResultCardUpdate.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 130`** (1 nodes): `sonner.tsx`
+- **Thin community `Community 130`** (1 nodes): `SourcePlatform.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 131`** (1 nodes): `switch.tsx`
+- **Thin community `Community 131`** (1 nodes): `ConversationMessage.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 132`** (1 nodes): `tailwind.config.js`
+- **Thin community `Community 132`** (1 nodes): `ActiveCommerceContext.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 133`** (1 nodes): `main.tsx`
+- **Thin community `Community 133`** (1 nodes): `ResultCard.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 134`** (1 nodes): `env.d.ts`
+- **Thin community `Community 134`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 135`** (1 nodes): `constants.ts`
+- **Thin community `Community 135`** (1 nodes): `ResultCardType.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 136`** (1 nodes): `APIReference.tsx`
+- **Thin community `Community 136`** (1 nodes): `NormalizedProductSnapshot.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 137`** (1 nodes): `Header.tsx`
+- **Thin community `Community 137`** (1 nodes): `globals.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 138`** (1 nodes): `CodeEditor.tsx`
+- **Thin community `Community 138`** (1 nodes): `markdown.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 139`** (1 nodes): `aurora-text.tsx`
+- **Thin community `Community 139`** (1 nodes): `assets.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 140`** (1 nodes): `sonner.tsx`
+- **Thin community `Community 140`** (1 nodes): `TaskOutcome.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 141`** (1 nodes): `switch.tsx`
+- **Thin community `Community 141`** (1 nodes): `ConversationMessage.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 142`** (1 nodes): `OneMoreThingSection.tsx`
+- **Thin community `Community 142`** (1 nodes): `Conversation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 143`** (1 nodes): `ScenariosSection.tsx`
+- **Thin community `Community 143`** (1 nodes): `HistoryDetail.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 144`** (1 nodes): `FeaturesSection.tsx`
+- **Thin community `Community 144`** (1 nodes): `ConversationTimeline.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 145`** (1 nodes): `Layout.tsx`
+- **Thin community `Community 145`** (1 nodes): `sonner.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 146`** (1 nodes): `page.tsx`
+- **Thin community `Community 146`** (1 nodes): `switch.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 147`** (1 nodes): `page.tsx`
+- **Thin community `Community 147`** (1 nodes): `tailwind.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 148`** (1 nodes): `page.tsx`
+- **Thin community `Community 148`** (1 nodes): `main.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 149`** (1 nodes): `page.tsx`
+- **Thin community `Community 149`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 150`** (1 nodes): `page.tsx`
+- **Thin community `Community 150`** (1 nodes): `constants.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 151`** (1 nodes): `page.tsx`
+- **Thin community `Community 151`** (1 nodes): `APIReference.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 152`** (1 nodes): `index.js`
+- **Thin community `Community 152`** (1 nodes): `Header.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 153`** (1 nodes): `vite.iife.config.js`
+- **Thin community `Community 153`** (1 nodes): `CodeEditor.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 154`** (1 nodes): `vite.config.js`
+- **Thin community `Community 154`** (1 nodes): `aurora-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 155`** (1 nodes): `demo.ts`
+- **Thin community `Community 155`** (1 nodes): `sonner.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 156`** (1 nodes): `env.d.ts`
+- **Thin community `Community 156`** (1 nodes): `switch.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 157`** (1 nodes): `vite.config.js`
+- **Thin community `Community 157`** (1 nodes): `OneMoreThingSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 158`** (1 nodes): `types.ts`
+- **Thin community `Community 158`** (1 nodes): `ScenariosSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 159`** (1 nodes): `constants.ts`
+- **Thin community `Community 159`** (1 nodes): `FeaturesSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 160`** (1 nodes): `vite.config.js`
+- **Thin community `Community 160`** (1 nodes): `Layout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 161`** (1 nodes): `env.d.ts`
+- **Thin community `Community 161`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 162`** (1 nodes): `type.ts`
+- **Thin community `Community 162`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 163`** (1 nodes): `index.d.ts`
+- **Thin community `Community 163`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 164`** (1 nodes): `agents_dom_pipeline`
+- **Thin community `Community 164`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 165`** (1 nodes): `agents_page_controller_package`
+- **Thin community `Community 165`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 166`** (1 nodes): `agents_llms_package`
+- **Thin community `Community 166`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 167`** (1 nodes): `core_prompt_indexed_interactions`
+- **Thin community `Community 167`** (1 nodes): `index.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 168`** (1 nodes): `mcp_mcp_server`
+- **Thin community `Community 168`** (1 nodes): `vite.iife.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 169`** (1 nodes): `mcp_launcher_page`
+- **Thin community `Community 169`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 170`** (1 nodes): `mcp_websocket_hub`
+- **Thin community `Community 170`** (1 nodes): `demo.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 171`** (1 nodes): `agents_monorepo_workspaces`
+- **Thin community `Community 171`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 172`** (1 nodes): `developer_guide_local_development`
+- **Thin community `Community 172`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 173`** (1 nodes): `Testing API Extension`
+- **Thin community `Community 173`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 174`** (1 nodes): `SPA GitHub Pages`
+- **Thin community `Community 174`** (1 nodes): `constants.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 175`** (1 nodes): `vite.config.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 176`** (1 nodes): `env.d.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 177`** (1 nodes): `type.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 178`** (1 nodes): `index.d.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 179`** (1 nodes): `agents_dom_pipeline`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 180`** (1 nodes): `agents_page_controller_package`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 181`** (1 nodes): `agents_llms_package`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 182`** (1 nodes): `core_prompt_indexed_interactions`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 183`** (1 nodes): `mcp_mcp_server`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 184`** (1 nodes): `mcp_launcher_page`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 185`** (1 nodes): `mcp_websocket_hub`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 186`** (1 nodes): `agents_monorepo_workspaces`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 187`** (1 nodes): `developer_guide_local_development`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 188`** (1 nodes): `Testing API Extension`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 189`** (1 nodes): `SPA GitHub Pages`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PageController` connect `Community 1` to `Community 4`, `Community 5`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `PageAgentDocs()` connect `Community 0` to `Community 9`, `Community 4`, `Community 5`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `clear()` connect `Community 1` to `Community 8`, `Community 11`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `clear()` connect `Community 5` to `Community 3`, `Community 11`, `Community 4`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+- **Why does `PageController` connect `Community 4` to `Community 3`, `Community 7`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+- **Why does `PageAgentDocs()` connect `Community 0` to `Community 9`, `Community 3`, `Community 7`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **What connects `Text-Based DOM Manipulation`, `Free Testing LLM API`, `MIT License` to the rest of the system?**
   _68 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._

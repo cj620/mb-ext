@@ -1,17 +1,14 @@
-import {
-	ArrowDownToLine,
-	ArrowLeft,
-	CheckCircle,
-	History,
-	RotateCcw,
-	Trash2,
-	XCircle,
-} from 'lucide-react'
+import { ArrowLeft, History, MessageSquarePlus, Trash2 } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
 
+import type { ConversationRecord } from '@/agent/domain/Conversation'
 import { Button } from '@/components/ui/button'
-import { type SessionRecord, clearSessions, deleteSession, listSessions } from '@/lib/db'
-import { downloadHistoryExport } from '@/lib/history-export'
+import {
+	clearConversations,
+	createConversation,
+	deleteConversation,
+	listConversations,
+} from '@/lib/db'
 
 function timeAgo(ts: number): string {
 	const seconds = Math.floor((Date.now() - ts) / 1000)
@@ -25,20 +22,20 @@ function timeAgo(ts: number): string {
 }
 
 export function HistoryList({
+	activeConversationId,
 	onSelect,
 	onBack,
-	onRerun,
 }: {
+	activeConversationId?: string
 	onSelect: (id: string) => void
 	onBack: () => void
-	onRerun: (task: string) => void
 }) {
-	const [sessions, setSessions] = useState<SessionRecord[]>([])
+	const [conversations, setConversations] = useState<ConversationRecord[]>([])
 	const [loading, setLoading] = useState(true)
 
 	const load = useCallback(async () => {
 		try {
-			setSessions(await listSessions())
+			setConversations(await listConversations())
 		} catch (err) {
 			console.error('[HistoryList] Failed to load sessions:', err)
 		} finally {
@@ -52,18 +49,23 @@ export function HistoryList({
 
 	const handleDelete = async (e: React.MouseEvent, id: string) => {
 		e.stopPropagation()
-		await deleteSession(id)
-		setSessions((prev) => prev.filter((s) => s.id !== id))
-	}
+		await deleteConversation(id)
+		setConversations((prev) => {
+			const remaining = prev.filter((conversation) => conversation.id !== id)
 
-	const handleExport = (e: React.MouseEvent, session: SessionRecord) => {
-		e.stopPropagation()
-		downloadHistoryExport(session.task, session.createdAt, session.history)
-	}
+			if (id === activeConversationId) {
+				if (remaining[0]) {
+					onSelect(remaining[0].id)
+				} else {
+					void createConversation().then((conversation) => {
+						setConversations([conversation])
+						onSelect(conversation.id)
+					})
+				}
+			}
 
-	const handleRerun = (e: React.MouseEvent, task: string) => {
-		e.stopPropagation()
-		onRerun(task)
+			return remaining
+		})
 	}
 
 	return (
@@ -80,14 +82,29 @@ export function HistoryList({
 				>
 					<ArrowLeft className="size-3.5" />
 				</Button>
-				<span className="text-sm font-medium flex-1">History</span>
-				{sessions.length > 0 && (
+				<span className="text-sm font-medium flex-1">Conversations</span>
+				<Button
+					variant="ghost"
+					size="sm"
+					onClick={async () => {
+						const conversation = await createConversation()
+						setConversations((prev) => [conversation, ...prev])
+						onSelect(conversation.id)
+					}}
+					className="text-[10px] cursor-pointer h-6 px-2"
+				>
+					<MessageSquarePlus className="size-3 mr-1" />
+					New
+				</Button>
+				{conversations.length > 0 && (
 					<Button
 						variant="ghost"
 						size="sm"
 						onClick={async () => {
-							await clearSessions()
-							setSessions([])
+							await clearConversations()
+							const conversation = await createConversation()
+							setConversations([conversation])
+							onSelect(conversation.id)
 						}}
 						className="text-[10px] text-muted-foreground hover:text-destructive cursor-pointer h-6 px-2"
 					>
@@ -113,64 +130,39 @@ export function HistoryList({
 					</div>
 				)}
 
-				{!loading && sessions.length === 0 && (
+				{!loading && conversations.length === 0 && (
 					<div className="flex flex-col items-center justify-center h-40 gap-2 text-muted-foreground">
 						<History className="size-8 opacity-30" />
-						<p className="text-xs">No history yet</p>
+						<p className="text-xs">No conversations yet</p>
 					</div>
 				)}
 
-				{sessions.map((session) => (
+				{conversations.map((conversation) => (
 					<div
-						key={session.id}
+						key={conversation.id}
 						role="button"
 						tabIndex={0}
-						onClick={() => onSelect(session.id)}
+						onClick={() => onSelect(conversation.id)}
 						className="w-full text-left px-3 py-2.5 border-b hover:bg-muted/50 transition-colors cursor-pointer flex items-start gap-2 group"
 					>
-						{/* Status icon */}
-						{session.status === 'completed' ? (
-							<CheckCircle className="size-3.5 text-green-500 shrink-0 mt-0.5" />
-						) : (
-							<XCircle className="size-3.5 text-destructive shrink-0 mt-0.5" />
-						)}
+						<History className="size-3.5 text-muted-foreground shrink-0 mt-0.5" />
 
-						{/* Content */}
 						<div className="flex-1 min-w-0">
-							<p className="text-xs font-medium truncate">{session.task}</p>
+							<p className="text-xs font-medium truncate">{conversation.title}</p>
 							<div className="flex items-center mt-0.5">
-								<p className="text-[10px] text-muted-foreground">
-									{timeAgo(session.createdAt)} · {session.history.length} steps
+								<p className="text-[10px] text-muted-foreground truncate">
+									{timeAgo(conversation.updatedAt)}
+									{conversation.lastMessagePreview ? ` · ${conversation.lastMessagePreview}` : ''}
 								</p>
-								<div className="flex items-center gap-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
-									<button
-										type="button"
-										onClick={(e) => handleRerun(e, session.task)}
-										className="p-0.5 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-										title="Run task again"
-										aria-label={`Run history task again: ${session.task}`}
-									>
-										<RotateCcw className="size-3" />
-									</button>
-									<button
-										type="button"
-										onClick={(e) => handleExport(e, session)}
-										className="p-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-										title="Export history JSON"
-										aria-label={`Export history for ${session.task}`}
-									>
-										<ArrowDownToLine className="size-3" />
-									</button>
-									<button
-										type="button"
-										onClick={(e) => handleDelete(e, session.id)}
-										className="p-0.5 text-muted-foreground hover:text-destructive transition-colors cursor-pointer"
-										title="Delete history"
-										aria-label={`Delete history for ${session.task}`}
-									>
-										<Trash2 className="size-3" />
-									</button>
-								</div>
+								<button
+									type="button"
+									onClick={(e) => handleDelete(e, conversation.id)}
+									className="ml-auto p-0.5 opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-destructive transition-colors cursor-pointer"
+									title="Delete conversation"
+									aria-label={`Delete conversation ${conversation.title}`}
+								>
+									<Trash2 className="size-3" />
+								</button>
 							</div>
 						</div>
 					</div>
