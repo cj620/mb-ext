@@ -1,4 +1,5 @@
 import { initPageController } from '@/agent/RemotePageController.content'
+import { extractAmazonProduct } from '@/commerce/runtime/extractors/amazon'
 
 // import { DEMO_CONFIG } from '@/agent/constants'
 
@@ -11,6 +12,7 @@ export default defineContentScript({
 	main() {
 		console.debug(`${DEBUG_PREFIX} Loaded on ${window.location.href}`)
 		initPageController()
+		initCommerceRuntime()
 
 		// if auth token matches, expose agent to page
 		chrome.storage.local.get('PageAgentExtUserAuthToken').then((result) => {
@@ -35,6 +37,51 @@ export default defineContentScript({
 		})
 	},
 })
+
+function detectSourcePlatform(url: string): 'amazon' | 'shopee' | 'unknown' {
+	try {
+		const hostname = new URL(url).hostname
+		if (/(^|\.)amazon\./i.test(hostname)) return 'amazon'
+		if (/(^|\.)shopee\./i.test(hostname)) return 'shopee'
+		return 'unknown'
+	} catch {
+		return 'unknown'
+	}
+}
+
+function initCommerceRuntime() {
+	chrome.runtime.onMessage.addListener((message, sender, sendResponse): true | undefined => {
+		if (message.type !== 'COMMERCE_CONTROL') return
+
+		if (message.action === 'extract_product') {
+			try {
+				const platform = detectSourcePlatform(window.location.href)
+				if (platform === 'amazon') {
+					sendResponse({
+						success: true,
+						platform,
+						product: extractAmazonProduct(document),
+					})
+					return
+				}
+
+				sendResponse({
+					success: false,
+					platform,
+					error: 'Current page is not supported for commerce extraction yet.',
+				})
+			} catch (error) {
+				sendResponse({
+					success: false,
+					platform: 'unknown',
+					error: error instanceof Error ? error.message : String(error),
+				})
+			}
+		}
+
+		return true
+	})
+}
 
 async function exposeAgentToPage() {
 	const { MultiPageAgent } = await import('@/agent/MultiPageAgent')

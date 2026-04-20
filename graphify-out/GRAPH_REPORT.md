@@ -1,169 +1,190 @@
-# Graph Report - .  (2026-04-17)
+# Graph Report - /Users/mima0000/Desktop/AI/page-agent  (2026-04-20)
 
 ## Corpus Check
-- 186 files · ~82,677 words
+- 189 files · ~90,093 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 676 nodes · 774 edges · 154 communities detected
-- Extraction: 82% EXTRACTED · 18% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.8)
+- 730 nodes · 822 edges · 175 communities detected
+- Extraction: 82% EXTRACTED · 18% INFERRED · 0% AMBIGUOUS · INFERRED: 144 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_UI Panel And I18n|UI Panel And I18n]]
-- [[_COMMUNITY_Extension Remote Controller|Extension Remote Controller]]
-- [[_COMMUNITY_Monorepo Architecture|Monorepo Architecture]]
-- [[_COMMUNITY_DOM Actions And Mask|DOM Actions And Mask]]
-- [[_COMMUNITY_Core Agent Loop|Core Agent Loop]]
-- [[_COMMUNITY_Hub Bridge And Theme|Hub Bridge And Theme]]
-- [[_COMMUNITY_LLM Response Handling|LLM Response Handling]]
-- [[_COMMUNITY_DOM Tree Extraction|DOM Tree Extraction]]
-- [[_COMMUNITY_Session History Storage|Session History Storage]]
-- [[_COMMUNITY_Website Documentation|Website Documentation]]
-- [[_COMMUNITY_Page State Serialization|Page State Serialization]]
-- [[_COMMUNITY_Console Execution Tool|Console Execution Tool]]
-- [[_COMMUNITY_Hub WebSocket|Hub WebSocket]]
-- [[_COMMUNITY_Architecture God Nodes|Architecture God Nodes]]
-- [[_COMMUNITY_Security And Privacy|Security And Privacy]]
-- [[_COMMUNITY_Graphify Report|Graphify Report]]
-- [[_COMMUNITY_Multi Page Agent|Multi Page Agent]]
-- [[_COMMUNITY_UI Item Components|UI Item Components]]
-- [[_COMMUNITY_LLM Client Retry|LLM Client Retry]]
-- [[_COMMUNITY_Cursor Mask Assets|Cursor Mask Assets]]
-- [[_COMMUNITY_Website Error Boundary|Website Error Boundary]]
-- [[_COMMUNITY_Website App Shell|Website App Shell]]
-- [[_COMMUNITY_Website Routing|Website Routing]]
-- [[_COMMUNITY_Brand Assets|Brand Assets]]
-- [[_COMMUNITY_Mask Cursor Outline|Mask Cursor Outline]]
-- [[_COMMUNITY_Tab Events Background|Tab Events Background]]
-- [[_COMMUNITY_Extension Config Panel|Extension Config Panel]]
-- [[_COMMUNITY_Website Misc Components|Website Misc Components]]
-- [[_COMMUNITY_Sidepanel Agent Hook|Sidepanel Agent Hook]]
-- [[_COMMUNITY_Docs Router|Docs Router]]
-- [[_COMMUNITY_hex To Rgb|hex To Rgb]]
-- [[_COMMUNITY_Home Page|Home Page]]
-- [[_COMMUNITY_on Activity|on Activity]]
-- [[_COMMUNITY_Invoke Error|Invoke Error]]
-- [[_COMMUNITY_Page Agent Gradient Brand Mark|Page Agent Gradient Brand Mark]]
-- [[_COMMUNITY_Page Agent Gradient Brand Mark|Page Agent Gradient Brand Mark]]
-- [[_COMMUNITY_is Main Branch|is Main Branch]]
-- [[_COMMUNITY_is Internal Package|is Internal Package]]
-- [[_COMMUNITY_utils|utils]]
-- [[_COMMUNITY_is Testing Endpoint|is Testing Endpoint]]
-- [[_COMMUNITY_Card Description|Card Description]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_Typing Animation|Typing Animation]]
-- [[_COMMUNITY_Hover Card|Hover Card]]
-- [[_COMMUNITY_Separator|Separator]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_Spinner|Spinner]]
-- [[_COMMUNITY_utils|utils]]
-- [[_COMMUNITY_handle System Theme Change|handle System Theme Change]]
-- [[_COMMUNITY_handle Click Outside|handle Click Outside]]
-- [[_COMMUNITY_Alert|Alert]]
-- [[_COMMUNITY_get Random Int|get Random Int]]
-- [[_COMMUNITY_Bento Card|Bento Card]]
-- [[_COMMUNITY_Sparkle|Sparkle]]
-- [[_COMMUNITY_format Stars|format Stars]]
-- [[_COMMUNITY_Docs Page|Docs Page]]
-- [[_COMMUNITY_Page Agent|Page Agent]]
-- [[_COMMUNITY_fix Antd Select|fix Antd Select]]
-- [[_COMMUNITY_Multi Tab Browser State Prompt|Multi Tab Browser State Prompt]]
-- [[_COMMUNITY_DO Pipeline|DO Pipeline]]
-- [[_COMMUNITY_parallel Task|parallel Task]]
-- [[_COMMUNITY_create Motion|create Motion]]
-- [[_COMMUNITY_tool|tool]]
-- [[_COMMUNITY_get Activity Info|get Activity Info]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_Label|Label]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_Input|Input]]
-- [[_COMMUNITY_open Or Focus Hub Tab|open Or Focus Hub Tab]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_Heading|Heading]]
-- [[_COMMUNITY_Marquee|Marquee]]
-- [[_COMMUNITY_Tooltip Content|Tooltip Content]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_cn|cn]]
-- [[_COMMUNITY_Neon Gradient Card|Neon Gradient Card]]
-- [[_COMMUNITY_Badge|Badge]]
-- [[_COMMUNITY_Text Animate Base|Text Animate Base]]
-- [[_COMMUNITY_Animated Shiny Text|Animated Shiny Text]]
-- [[_COMMUNITY_Highlighter|Highlighter]]
-- [[_COMMUNITY_Blur Fade|Blur Fade]]
-- [[_COMMUNITY_Mcp Server Page|Mcp Server Page]]
-- [[_COMMUNITY_Keep a Changelog|Keep a Changelog]]
-- [[_COMMUNITY_AGENTS|AGENTS]]
-- [[_COMMUNITY_Bring Your Own LL Ms|Bring Your Own LL Ms]]
-- [[_COMMUNITY_Page Agent|Page Agent]]
-- [[_COMMUNITY_create Card|create Card]]
-- [[_COMMUNITY_Client Side Web Enhancement|Client Side Web Enhancement]]
-- [[_COMMUNITY_agents source first publish workflow|agents source first publish workflow]]
-- [[_COMMUNITY_Private Vulnerability Reporting|Private Vulnerability Reporting]]
-- [[_COMMUNITY_SP Routes for Git Hub|SP Routes for Git Hub]]
-- [[_COMMUNITY_eslint config|eslint config]]
-- [[_COMMUNITY_build|build]]
-- [[_COMMUNITY_pre publish|pre publish]]
-- [[_COMMUNITY_post publish|post publish]]
-- [[_COMMUNITY_build libs|build libs]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_env d|env d]]
-- [[_COMMUNITY_index|index]]
-- [[_COMMUNITY_types|types]]
-- [[_COMMUNITY_locales|locales]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_env d|env d]]
-- [[_COMMUNITY_types|types]]
-- [[_COMMUNITY_wxt config|wxt config]]
-- [[_COMMUNITY_globals d|globals d]]
-- [[_COMMUNITY_markdown d|markdown d]]
-- [[_COMMUNITY_assets d|assets d]]
-- [[_COMMUNITY_History Detail|History Detail]]
-- [[_COMMUNITY_sonner|sonner]]
-- [[_COMMUNITY_switch|switch]]
-- [[_COMMUNITY_tailwind config|tailwind config]]
-- [[_COMMUNITY_main|main]]
-- [[_COMMUNITY_env d|env d]]
-- [[_COMMUNITY_constants|constants]]
-- [[_COMMUNITY_API Reference|API Reference]]
-- [[_COMMUNITY_Header|Header]]
-- [[_COMMUNITY_Code Editor|Code Editor]]
-- [[_COMMUNITY_aurora text|aurora text]]
-- [[_COMMUNITY_sonner|sonner]]
-- [[_COMMUNITY_switch|switch]]
-- [[_COMMUNITY_One More Thing Section|One More Thing Section]]
-- [[_COMMUNITY_Scenarios Section|Scenarios Section]]
-- [[_COMMUNITY_Features Section|Features Section]]
-- [[_COMMUNITY_Layout|Layout]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_page|page]]
-- [[_COMMUNITY_index|index]]
-- [[_COMMUNITY_vite iife config|vite iife config]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_demo|demo]]
-- [[_COMMUNITY_env d|env d]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_types|types]]
-- [[_COMMUNITY_constants|constants]]
-- [[_COMMUNITY_vite config|vite config]]
-- [[_COMMUNITY_env d|env d]]
-- [[_COMMUNITY_type|type]]
-- [[_COMMUNITY_index d|index d]]
-- [[_COMMUNITY_agents dom pipeline|agents dom pipeline]]
-- [[_COMMUNITY_agents page controller package|agents page controller package]]
-- [[_COMMUNITY_agents llms package|agents llms package]]
-- [[_COMMUNITY_core prompt indexed interactions|core prompt indexed interactions]]
-- [[_COMMUNITY_mcp mcp server|mcp mcp server]]
-- [[_COMMUNITY_mcp launcher page|mcp launcher page]]
-- [[_COMMUNITY_mcp websocket hub|mcp websocket hub]]
-- [[_COMMUNITY_agents monorepo workspaces|agents monorepo workspaces]]
-- [[_COMMUNITY_developer guide local development|developer guide local development]]
-- [[_COMMUNITY_Testing AP Extension|Testing AP Extension]]
-- [[_COMMUNITY_SP Git Hub Pages|SP Git Hub Pages]]
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
+- [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 110|Community 110]]
+- [[_COMMUNITY_Community 111|Community 111]]
+- [[_COMMUNITY_Community 112|Community 112]]
+- [[_COMMUNITY_Community 113|Community 113]]
+- [[_COMMUNITY_Community 114|Community 114]]
+- [[_COMMUNITY_Community 115|Community 115]]
+- [[_COMMUNITY_Community 116|Community 116]]
+- [[_COMMUNITY_Community 117|Community 117]]
+- [[_COMMUNITY_Community 118|Community 118]]
+- [[_COMMUNITY_Community 119|Community 119]]
+- [[_COMMUNITY_Community 120|Community 120]]
+- [[_COMMUNITY_Community 121|Community 121]]
+- [[_COMMUNITY_Community 122|Community 122]]
+- [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
+- [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 126|Community 126]]
+- [[_COMMUNITY_Community 127|Community 127]]
+- [[_COMMUNITY_Community 128|Community 128]]
+- [[_COMMUNITY_Community 129|Community 129]]
+- [[_COMMUNITY_Community 130|Community 130]]
+- [[_COMMUNITY_Community 131|Community 131]]
+- [[_COMMUNITY_Community 132|Community 132]]
+- [[_COMMUNITY_Community 133|Community 133]]
+- [[_COMMUNITY_Community 134|Community 134]]
+- [[_COMMUNITY_Community 135|Community 135]]
+- [[_COMMUNITY_Community 136|Community 136]]
+- [[_COMMUNITY_Community 137|Community 137]]
+- [[_COMMUNITY_Community 138|Community 138]]
+- [[_COMMUNITY_Community 139|Community 139]]
+- [[_COMMUNITY_Community 140|Community 140]]
+- [[_COMMUNITY_Community 141|Community 141]]
+- [[_COMMUNITY_Community 142|Community 142]]
+- [[_COMMUNITY_Community 143|Community 143]]
+- [[_COMMUNITY_Community 144|Community 144]]
+- [[_COMMUNITY_Community 145|Community 145]]
+- [[_COMMUNITY_Community 146|Community 146]]
+- [[_COMMUNITY_Community 147|Community 147]]
+- [[_COMMUNITY_Community 148|Community 148]]
+- [[_COMMUNITY_Community 149|Community 149]]
+- [[_COMMUNITY_Community 150|Community 150]]
+- [[_COMMUNITY_Community 151|Community 151]]
+- [[_COMMUNITY_Community 152|Community 152]]
+- [[_COMMUNITY_Community 153|Community 153]]
+- [[_COMMUNITY_Community 154|Community 154]]
+- [[_COMMUNITY_Community 155|Community 155]]
+- [[_COMMUNITY_Community 156|Community 156]]
+- [[_COMMUNITY_Community 157|Community 157]]
+- [[_COMMUNITY_Community 158|Community 158]]
+- [[_COMMUNITY_Community 159|Community 159]]
+- [[_COMMUNITY_Community 160|Community 160]]
+- [[_COMMUNITY_Community 161|Community 161]]
+- [[_COMMUNITY_Community 162|Community 162]]
+- [[_COMMUNITY_Community 163|Community 163]]
+- [[_COMMUNITY_Community 164|Community 164]]
+- [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
+- [[_COMMUNITY_Community 167|Community 167]]
+- [[_COMMUNITY_Community 168|Community 168]]
+- [[_COMMUNITY_Community 169|Community 169]]
+- [[_COMMUNITY_Community 170|Community 170]]
+- [[_COMMUNITY_Community 171|Community 171]]
+- [[_COMMUNITY_Community 172|Community 172]]
+- [[_COMMUNITY_Community 173|Community 173]]
+- [[_COMMUNITY_Community 174|Community 174]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Panel` - 33 edges
@@ -178,16 +199,16 @@
 10. `buildDomTree()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `BYOK Architecture` --semantically_similar_to--> `Bring Your Own LLMs`  [INFERRED] [semantically similar]
-  docs/terms-and-privacy.md → README.md
-- `Page Agent Chinese README` --semantically_similar_to--> `Page Agent`  [EXTRACTED] [semantically similar]
-  docs/README-zh.md → README.md
-- `execute_task MCP Tool` --conceptually_related_to--> `Client-Side Web Enhancement`  [INFERRED]
-  packages/mcp/README.md → README.md
-- `Multi-Tab Browser State Prompt` --implements--> `Optional Chrome Extension`  [INFERRED]
-  packages/extension/src/agent/system_prompt.md → README.md
-- `@page-agent/mcp Server` --semantically_similar_to--> `MCP Server Beta`  [EXTRACTED] [semantically similar]
-  packages/mcp/README.md → README.md
+- `Bring Your Own LLMs` --semantically_similar_to--> `BYOK Architecture`  [INFERRED] [semantically similar]
+  README.md → docs/terms-and-privacy.md
+- `Page Agent` --semantically_similar_to--> `Page Agent Chinese README`  [EXTRACTED] [semantically similar]
+  README.md → docs/README-zh.md
+- `Client-Side Web Enhancement` --conceptually_related_to--> `execute_task MCP Tool`  [INFERRED]
+  README.md → packages/mcp/README.md
+- `Optional Chrome Extension` --implements--> `Multi-Tab Browser State Prompt`  [INFERRED]
+  README.md → packages/extension/src/agent/system_prompt.md
+- `MCP Server Beta` --semantically_similar_to--> `@page-agent/mcp Server`  [EXTRACTED] [semantically similar]
+  README.md → packages/mcp/README.md
 
 ## Hyperedges (group relationships)
 - **DOM to LLM Action Loop** — agents_dom_pipeline, agents_page_controller_package, agents_llms_package, core_prompt_indexed_interactions [EXTRACTED 1.00]
@@ -199,828 +220,948 @@
 
 ## Communities
 
-### Community 0 - "UI Panel And I18n"
+### Community 0 - "Community 0"
 Cohesion: 0.07
 Nodes (10): createCard(), createReflectionLines(), escapeHtml(), highlightSyntax(), HighlightSyntaxClient(), I18n, handleGlobalPointerOut(), handleVisibility() (+2 more)
 
-### Community 1 - "Extension Remote Controller"
-Cohesion: 0.08
-Nodes (10): main(), handlePageControlMessage(), initPageController(), isContentScriptAllowed(), RemotePageController, sendMessage(), randomColor(), sendMessage() (+2 more)
+### Community 1 - "Community 1"
+Cohesion: 0.07
+Nodes (31): blurLastClickedElement(), clickElement(), getElementByIndex(), inputTextElement(), scrollHorizontally(), scrollIntoViewIfNeeded(), scrollVertically(), selectOptionElement() (+23 more)
 
-### Community 2 - "Monorepo Architecture"
+### Community 2 - "Community 2"
 Cohesion: 0.06
 Nodes (45): Core Package, DOM Pipeline, LLMs Package, npm Workspaces Monorepo, Page Agent Package, Page Controller Package, Rationale: Async Isolated Module Boundaries, Source-First Publish Workflow (+37 more)
 
-### Community 3 - "DOM Actions And Mask"
+### Community 3 - "Community 3"
 Cohesion: 0.1
-Nodes (22): blurLastClickedElement(), clickElement(), getElementByIndex(), inputTextElement(), scrollHorizontally(), scrollIntoViewIfNeeded(), scrollVertically(), selectOptionElement() (+14 more)
+Nodes (8): handlePageControlMessage(), isContentScriptAllowed(), RemotePageController, sendMessage(), randomColor(), sendMessage(), TabsController, waitUntil()
 
-### Community 4 - "Core Agent Loop"
+### Community 4 - "Community 4"
 Cohesion: 0.13
 Nodes (6): cleanUpHighlights(), fetchLlmsTxt(), randomID(), truncate(), uid(), PageAgentCore
 
-### Community 5 - "Hub Bridge And Theme"
-Cohesion: 0.11
+### Community 5 - "Community 5"
+Cohesion: 0.1
 Nodes (7): hasDarkModeClass(), isBackgroundDark(), isColorDark(), isPageDark(), parseRgbColor(), HubBridge, SimulatorMask
 
-### Community 6 - "LLM Response Handling"
+### Community 6 - "Community 6"
 Cohesion: 0.12
 Nodes (12): normalizeResponse(), retrieveJsonFromString(), safeJsonParse(), validateAction(), handleExecute(), execute(), getId(), stop() (+4 more)
 
-### Community 7 - "DOM Tree Extraction"
+### Community 7 - "Community 7"
 Cohesion: 0.21
 Nodes (20): addExtraData(), buildDomTree(), getCachedBoundingRect(), getCachedClientRects(), getCachedComputedStyle(), getElementPosition(), getXPathTree(), handleHighlighting() (+12 more)
 
-### Community 8 - "Session History Storage"
+### Community 8 - "Community 8"
 Cohesion: 0.16
 Nodes (14): clearSessions(), deleteSession(), getDB(), getSession(), listSessions(), saveSession(), buildHistoryExportFilename(), downloadHistoryExport() (+6 more)
 
-### Community 9 - "Website Documentation"
+### Community 9 - "Community 9"
 Cohesion: 0.11
 Nodes (9): BetaNotice(), useLanguage(), Footer(), CustomTools(), DataMasking(), Instructions(), Overview(), SecurityPermissions() (+1 more)
 
-### Community 10 - "Page State Serialization"
-Cohesion: 0.18
-Nodes (9): getPageInfo(), flatTreeToString(), getElementTextMap(), getFlatTree(), getSelectorMap(), globToRegex(), matchAttributes(), resolveViewportExpansion() (+1 more)
+### Community 10 - "Community 10"
+Cohesion: 0.14
+Nodes (7): captureCurrentProduct(), CurrentPageRuntime, detectSourcePlatform(), getActiveTab(), mapProductDetail(), mapProductSummary(), ProductExtractorRegistry
 
-### Community 11 - "Console Execution Tool"
+### Community 11 - "Community 11"
 Cohesion: 0.17
 Nodes (4): ConsoleInterceptor, executeCode(), formatResult(), handleKeyDown()
 
-### Community 12 - "Hub WebSocket"
+### Community 12 - "Community 12"
 Cohesion: 0.21
 Nodes (1): HubWs
 
-### Community 13 - "Architecture God Nodes"
+### Community 13 - "Community 13"
 Cohesion: 0.18
 Nodes (7): God Nodes, HubWs, PageAgentCore, PageController, Panel, RemotePageController, TabsController
 
-### Community 14 - "Security And Privacy"
+### Community 14 - "Community 14"
 Cohesion: 0.22
 Nodes (9): Extension Privacy Redirect, Free Testing LLM API, Private Vulnerability Reporting, Rationale: Avoid Public Exploit Details, Supported Security Versions, Alibaba Cloud Infrastructure, Extension Local Storage Only, No Sensitive Data Rule (+1 more)
 
-### Community 15 - "Graphify Report"
+### Community 15 - "Community 15"
+Cohesion: 0.5
+Nodes (7): extractAmazonProduct(), extractAsin(), extractBulletPoints(), extractCategoryPath(), queryFirstText(), queryImage(), textContent()
+
+### Community 16 - "Community 16"
+Cohesion: 0.25
+Nodes (4): App(), useAgent(), useCommerceAgent(), useCommerceState()
+
+### Community 17 - "Community 17"
+Cohesion: 0.29
+Nodes (3): initCommerceRuntime(), main(), initPageController()
+
+### Community 18 - "Community 18"
 Cohesion: 0.29
 Nodes (7): Community Hubs Navigation, Corpus Check, Rationale: Corpus Large Enough For Graph Structure, Graph Report, Hyperedges Section, Graph Summary Metrics, Surprising Connections
 
-### Community 16 - "Multi Page Agent"
+### Community 19 - "Community 19"
 Cohesion: 0.4
 Nodes (3): detectLanguage(), MultiPageAgent, createTabTools()
 
-### Community 17 - "UI Item Components"
+### Community 20 - "Community 20"
 Cohesion: 0.33
 Nodes (0): 
 
-### Community 18 - "LLM Client Retry"
+### Community 21 - "Community 21"
 Cohesion: 0.47
 Nodes (3): LLM, parseLLMConfig(), withRetry()
 
-### Community 19 - "Cursor Mask Assets"
+### Community 22 - "Community 22"
 Cohesion: 0.47
 Nodes (6): Adaptive Drop Shadow, Right Pointing Cursor Shape, Cursor Fill SVG Asset, Automation Cursor Visual Affordance, White Cursor Fill, Page Controller Simulator Mask Feedback
 
-### Community 20 - "Website Error Boundary"
+### Community 23 - "Community 23"
 Cohesion: 0.4
 Nodes (1): ErrorBoundary
 
-### Community 21 - "Website App Shell"
+### Community 24 - "Community 24"
 Cohesion: 0.4
 Nodes (2): toggle(), syncDarkMode()
 
-### Community 22 - "Website Routing"
+### Community 25 - "Community 25"
 Cohesion: 0.4
 Nodes (5): Website Sitemap, Rationale: GitHub Pages SPA Route Copies, shadcn/ui Preference, SPA Routes for GitHub Pages, wouter Base Path Routing
 
-### Community 23 - "Brand Assets"
+### Community 26 - "Community 26"
 Cohesion: 0.5
 Nodes (5): page-agent-256.webp Image Asset, Page Agent Brand Mark, Page Agent Extension Icon, Multicolor Gradient Visual Identity, White Forward Chevron Motif
 
-### Community 24 - "Mask Cursor Outline"
+### Community 27 - "Community 27"
 Cohesion: 0.6
 Nodes (5): Light Dark Stroke Adaptation, Pointer Cursor Outline, Cursor Border SVG Asset, Page Controller Automation Feedback, Page Controller Simulator Mask
 
-### Community 25 - "Tab Events Background"
+### Community 28 - "Community 28"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 26 - "Extension Config Panel"
+### Community 29 - "Community 29"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 27 - "Website Misc Components"
+### Community 30 - "Community 30"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 28 - "Sidepanel Agent Hook"
-Cohesion: 0.5
-Nodes (2): App(), useAgent()
-
-### Community 29 - "Docs Router"
+### Community 31 - "Community 31"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 30 - "hex To Rgb"
+### Community 32 - "Community 32"
 Cohesion: 0.83
 Nodes (3): hexToRgb(), MousePosition(), Particles()
 
-### Community 31 - "Home Page"
+### Community 33 - "Community 33"
 Cohesion: 0.5
 Nodes (2): HomePage(), useDocumentTitle()
 
-### Community 32 - "on Activity"
+### Community 34 - "Community 34"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 33 - "Invoke Error"
+### Community 35 - "Community 35"
 Cohesion: 0.67
 Nodes (1): InvokeError
 
-### Community 34 - "Page Agent Gradient Brand Mark"
+### Community 36 - "Community 36"
 Cohesion: 0.67
 Nodes (4): Page Agent Gradient Brand Mark, Page Agent Browser Extension Icon, Page Agent 64px Image Asset, Colorful Page Agent UI Identity
 
-### Community 35 - "Page Agent Gradient Brand Mark"
+### Community 37 - "Community 37"
 Cohesion: 0.67
 Nodes (4): Page Agent Gradient Brand Mark, Page Agent Extension Icon, Page Agent 64px Image Asset, Bright Geometric Page Agent Visual Identity
 
-### Community 36 - "is Main Branch"
+### Community 38 - "Community 38"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 37 - "is Internal Package"
+### Community 39 - "Community 39"
 Cohesion: 1.0
 Nodes (2): isInternalPackage(), updateInternalDeps()
 
-### Community 38 - "utils"
+### Community 40 - "Community 40"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 39 - "is Testing Endpoint"
+### Community 41 - "Community 41"
+Cohesion: 1.0
+Nodes (2): inferCompleteness(), normalizeAmazonProduct()
+
+### Community 42 - "Community 42"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 40 - "Card Description"
+### Community 43 - "Community 43"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 41 - "cn"
+### Community 44 - "Community 44"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 42 - "Typing Animation"
+### Community 45 - "Community 45"
 Cohesion: 0.67
 Nodes (1): TypingAnimation()
 
-### Community 43 - "Hover Card"
+### Community 46 - "Community 46"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 44 - "Separator"
+### Community 47 - "Community 47"
 Cohesion: 0.67
 Nodes (1): Separator()
 
-### Community 45 - "cn"
+### Community 48 - "Community 48"
 Cohesion: 0.67
 Nodes (1): cn()
 
-### Community 46 - "Spinner"
+### Community 49 - "Community 49"
 Cohesion: 0.67
 Nodes (1): Spinner()
 
-### Community 47 - "utils"
+### Community 50 - "Community 50"
 Cohesion: 0.67
 Nodes (1): cn()
 
-### Community 48 - "handle System Theme Change"
+### Community 51 - "Community 51"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 49 - "handle Click Outside"
+### Community 52 - "Community 52"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 50 - "Alert"
+### Community 53 - "Community 53"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 51 - "get Random Int"
+### Community 54 - "Community 54"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 52 - "Bento Card"
+### Community 55 - "Community 55"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 53 - "Sparkle"
+### Community 56 - "Community 56"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 54 - "format Stars"
+### Community 57 - "Community 57"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 55 - "Docs Page"
+### Community 58 - "Community 58"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 56 - "Page Agent"
+### Community 59 - "Community 59"
 Cohesion: 0.67
 Nodes (1): PageAgent
 
-### Community 57 - "fix Antd Select"
+### Community 60 - "Community 60"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 58 - "Multi Tab Browser State Prompt"
+### Community 61 - "Community 61"
 Cohesion: 0.67
 Nodes (3): Multi-Tab Browser State Prompt, Optional Chrome Extension, readme_chrome_extension
 
-### Community 59 - "DO Pipeline"
+### Community 62 - "Community 62"
 Cohesion: 0.67
 Nodes (3): DOM Pipeline, npm Workspaces Monorepo, Rationale: Async Isolated Module Boundaries
 
-### Community 60 - "parallel Task"
+### Community 63 - "Community 63"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 61 - "create Motion"
+### Community 64 - "Community 64"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 62 - "tool"
+### Community 65 - "Community 65"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 63 - "get Activity Info"
+### Community 66 - "Community 66"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 64 - "cn"
+### Community 67 - "Community 67"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 65 - "Label"
+### Community 68 - "Community 68"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 66 - "cn"
+### Community 69 - "Community 69"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 67 - "Input"
+### Community 70 - "Community 70"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 68 - "open Or Focus Hub Tab"
+### Community 71 - "Community 71"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 69 - "vite config"
+### Community 72 - "Community 72"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 70 - "Heading"
+### Community 73 - "Community 73"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 71 - "Marquee"
+### Community 74 - "Community 74"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 72 - "Tooltip Content"
+### Community 75 - "Community 75"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 73 - "cn"
+### Community 76 - "Community 76"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 74 - "cn"
+### Community 77 - "Community 77"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 75 - "Neon Gradient Card"
+### Community 78 - "Community 78"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 76 - "Badge"
+### Community 79 - "Community 79"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 77 - "Text Animate Base"
+### Community 80 - "Community 80"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 78 - "Animated Shiny Text"
+### Community 81 - "Community 81"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 79 - "Highlighter"
+### Community 82 - "Community 82"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 80 - "Blur Fade"
+### Community 83 - "Community 83"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 81 - "Mcp Server Page"
+### Community 84 - "Community 84"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 82 - "Keep a Changelog"
+### Community 85 - "Community 85"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 86 - "Community 86"
 Cohesion: 1.0
 Nodes (2): Keep a Changelog, Semantic Versioning
 
-### Community 83 - "AGENTS"
+### Community 87 - "Community 87"
 Cohesion: 1.0
 Nodes (1): AGENTS.md
 
-### Community 84 - "Bring Your Own LL Ms"
+### Community 88 - "Community 88"
 Cohesion: 1.0
 Nodes (2): Bring Your Own LLMs, BYOK Architecture
 
-### Community 85 - "Page Agent"
+### Community 89 - "Community 89"
 Cohesion: 1.0
 Nodes (2): Page Agent, Page Agent Chinese README
 
-### Community 86 - "create Card"
+### Community 90 - "Community 90"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 87 - "Client Side Web Enhancement"
+### Community 91 - "Community 91"
 Cohesion: 1.0
 Nodes (2): Client-Side Web Enhancement, execute_task MCP Tool
 
-### Community 88 - "agents source first publish workflow"
+### Community 92 - "Community 92"
 Cohesion: 1.0
 Nodes (2): agents_source_first_publish_workflow, Source-First Publish Workflow
 
-### Community 89 - "Private Vulnerability Reporting"
+### Community 93 - "Community 93"
 Cohesion: 1.0
 Nodes (2): Private Vulnerability Reporting, Rationale: Avoid Public Exploit Details
 
-### Community 90 - "SP Routes for Git Hub"
+### Community 94 - "Community 94"
 Cohesion: 1.0
 Nodes (2): Rationale: GitHub Pages SPA Route Copies, SPA Routes for GitHub Pages
 
-### Community 91 - "eslint config"
+### Community 95 - "Community 95"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 92 - "build"
+### Community 96 - "Community 96"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 93 - "pre publish"
+### Community 97 - "Community 97"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 94 - "post publish"
+### Community 98 - "Community 98"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 95 - "build libs"
+### Community 99 - "Community 99"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 96 - "vite config"
+### Community 100 - "Community 100"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 97 - "env d"
+### Community 101 - "Community 101"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 98 - "index"
+### Community 102 - "Community 102"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 99 - "types"
+### Community 103 - "Community 103"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 100 - "locales"
+### Community 104 - "Community 104"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 101 - "vite config"
+### Community 105 - "Community 105"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 102 - "env d"
+### Community 106 - "Community 106"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 103 - "types"
+### Community 107 - "Community 107"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 104 - "wxt config"
+### Community 108 - "Community 108"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 105 - "globals d"
+### Community 109 - "Community 109"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 106 - "markdown d"
+### Community 110 - "Community 110"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 107 - "assets d"
+### Community 111 - "Community 111"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 108 - "History Detail"
+### Community 112 - "Community 112"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 109 - "sonner"
+### Community 113 - "Community 113"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 110 - "switch"
+### Community 114 - "Community 114"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 111 - "tailwind config"
+### Community 115 - "Community 115"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 112 - "main"
+### Community 116 - "Community 116"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 113 - "env d"
+### Community 117 - "Community 117"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 114 - "constants"
+### Community 118 - "Community 118"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 115 - "API Reference"
+### Community 119 - "Community 119"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 116 - "Header"
+### Community 120 - "Community 120"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 117 - "Code Editor"
+### Community 121 - "Community 121"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 118 - "aurora text"
+### Community 122 - "Community 122"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 119 - "sonner"
+### Community 123 - "Community 123"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 120 - "switch"
+### Community 124 - "Community 124"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 121 - "One More Thing Section"
+### Community 125 - "Community 125"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 122 - "Scenarios Section"
+### Community 126 - "Community 126"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 123 - "Features Section"
+### Community 127 - "Community 127"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 124 - "Layout"
+### Community 128 - "Community 128"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 125 - "page"
+### Community 129 - "Community 129"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 126 - "page"
+### Community 130 - "Community 130"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 127 - "page"
+### Community 131 - "Community 131"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 128 - "page"
+### Community 132 - "Community 132"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 129 - "page"
+### Community 133 - "Community 133"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 130 - "page"
+### Community 134 - "Community 134"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 131 - "index"
+### Community 135 - "Community 135"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 132 - "vite iife config"
+### Community 136 - "Community 136"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 133 - "vite config"
+### Community 137 - "Community 137"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 134 - "demo"
+### Community 138 - "Community 138"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 135 - "env d"
+### Community 139 - "Community 139"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 136 - "vite config"
+### Community 140 - "Community 140"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 137 - "types"
+### Community 141 - "Community 141"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 138 - "constants"
+### Community 142 - "Community 142"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 139 - "vite config"
+### Community 143 - "Community 143"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 140 - "env d"
+### Community 144 - "Community 144"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 141 - "type"
+### Community 145 - "Community 145"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 142 - "index d"
+### Community 146 - "Community 146"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 143 - "agents dom pipeline"
+### Community 147 - "Community 147"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 148 - "Community 148"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 149 - "Community 149"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 150 - "Community 150"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 151 - "Community 151"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 152 - "Community 152"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 153 - "Community 153"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 154 - "Community 154"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 155 - "Community 155"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 156 - "Community 156"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 157 - "Community 157"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 158 - "Community 158"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 159 - "Community 159"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 160 - "Community 160"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 161 - "Community 161"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 162 - "Community 162"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 163 - "Community 163"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 164 - "Community 164"
 Cohesion: 1.0
 Nodes (1): agents_dom_pipeline
 
-### Community 144 - "agents page controller package"
+### Community 165 - "Community 165"
 Cohesion: 1.0
 Nodes (1): agents_page_controller_package
 
-### Community 145 - "agents llms package"
+### Community 166 - "Community 166"
 Cohesion: 1.0
 Nodes (1): agents_llms_package
 
-### Community 146 - "core prompt indexed interactions"
+### Community 167 - "Community 167"
 Cohesion: 1.0
 Nodes (1): core_prompt_indexed_interactions
 
-### Community 147 - "mcp mcp server"
+### Community 168 - "Community 168"
 Cohesion: 1.0
 Nodes (1): mcp_mcp_server
 
-### Community 148 - "mcp launcher page"
+### Community 169 - "Community 169"
 Cohesion: 1.0
 Nodes (1): mcp_launcher_page
 
-### Community 149 - "mcp websocket hub"
+### Community 170 - "Community 170"
 Cohesion: 1.0
 Nodes (1): mcp_websocket_hub
 
-### Community 150 - "agents monorepo workspaces"
+### Community 171 - "Community 171"
 Cohesion: 1.0
 Nodes (1): agents_monorepo_workspaces
 
-### Community 151 - "developer guide local development"
+### Community 172 - "Community 172"
 Cohesion: 1.0
 Nodes (1): developer_guide_local_development
 
-### Community 152 - "Testing AP Extension"
+### Community 173 - "Community 173"
 Cohesion: 1.0
 Nodes (1): Testing API Extension
 
-### Community 153 - "SP Git Hub Pages"
+### Community 174 - "Community 174"
 Cohesion: 1.0
 Nodes (1): SPA GitHub Pages
 
 ## Knowledge Gaps
 - **68 isolated node(s):** `Text-Based DOM Manipulation`, `Free Testing LLM API`, `MIT License`, `AI Coding Restriction for Core and Extension`, `Rationale: Contributors Author What They Commit` (+63 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `parallel Task`** (2 nodes): `parallelTask()`, `parallel-task.js`
+- **Thin community `Community 63`** (2 nodes): `parallelTask()`, `parallel-task.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `create Motion`** (2 nodes): `createMotion()`, `createMotion.ts`
+- **Thin community `Community 64`** (2 nodes): `createMotion()`, `createMotion.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `tool`** (2 nodes): `tool()`, `index.ts`
+- **Thin community `Community 65`** (2 nodes): `tool()`, `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `get Activity Info`** (2 nodes): `getActivityInfo()`, `cards.tsx`
+- **Thin community `Community 66`** (2 nodes): `ResultCardDock()`, `ResultCardDock.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `cn`** (2 nodes): `cn()`, `field.tsx`
+- **Thin community `Community 67`** (2 nodes): `getActivityInfo()`, `cards.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Label`** (2 nodes): `Label()`, `label.tsx`
+- **Thin community `Community 68`** (2 nodes): `cn()`, `field.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `cn`** (2 nodes): `cn()`, `textarea.tsx`
+- **Thin community `Community 69`** (2 nodes): `Label()`, `label.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Input`** (2 nodes): `Input()`, `input.tsx`
+- **Thin community `Community 70`** (2 nodes): `cn()`, `textarea.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `open Or Focus Hub Tab`** (2 nodes): `openOrFocusHubTab()`, `background.ts`
+- **Thin community `Community 71`** (2 nodes): `Input()`, `input.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (2 nodes): `vite.config.js`, `spaRoutes()`
+- **Thin community `Community 72`** (2 nodes): `openOrFocusHubTab()`, `background.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Heading`** (2 nodes): `Heading()`, `Heading.tsx`
+- **Thin community `Community 73`** (2 nodes): `vite.config.js`, `spaRoutes()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Marquee`** (2 nodes): `Marquee()`, `marquee.tsx`
+- **Thin community `Community 74`** (2 nodes): `Heading()`, `Heading.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Tooltip Content`** (2 nodes): `TooltipContent()`, `tooltip.tsx`
+- **Thin community `Community 75`** (2 nodes): `Marquee()`, `marquee.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `cn`** (2 nodes): `cn()`, `animated-gradient-text.tsx`
+- **Thin community `Community 76`** (2 nodes): `TooltipContent()`, `tooltip.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `cn`** (2 nodes): `cn()`, `kbd.tsx`
+- **Thin community `Community 77`** (2 nodes): `cn()`, `animated-gradient-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Neon Gradient Card`** (2 nodes): `NeonGradientCard()`, `neon-gradient-card.tsx`
+- **Thin community `Community 78`** (2 nodes): `cn()`, `kbd.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Badge`** (2 nodes): `Badge()`, `badge.tsx`
+- **Thin community `Community 79`** (2 nodes): `NeonGradientCard()`, `neon-gradient-card.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Text Animate Base`** (2 nodes): `TextAnimateBase()`, `text-animate.tsx`
+- **Thin community `Community 80`** (2 nodes): `Badge()`, `badge.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Animated Shiny Text`** (2 nodes): `AnimatedShinyText()`, `animated-shiny-text.tsx`
+- **Thin community `Community 81`** (2 nodes): `TextAnimateBase()`, `text-animate.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Highlighter`** (2 nodes): `Highlighter()`, `highlighter.tsx`
+- **Thin community `Community 82`** (2 nodes): `AnimatedShinyText()`, `animated-shiny-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Blur Fade`** (2 nodes): `BlurFade()`, `blur-fade.tsx`
+- **Thin community `Community 83`** (2 nodes): `Highlighter()`, `highlighter.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Mcp Server Page`** (2 nodes): `McpServerPage()`, `page.tsx`
+- **Thin community `Community 84`** (2 nodes): `BlurFade()`, `blur-fade.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Keep a Changelog`** (2 nodes): `Keep a Changelog`, `Semantic Versioning`
+- **Thin community `Community 85`** (2 nodes): `McpServerPage()`, `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `AGENTS`** (2 nodes): `AGENTS.md`, `CLAUDE.md`
+- **Thin community `Community 86`** (2 nodes): `Keep a Changelog`, `Semantic Versioning`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Bring Your Own LL Ms`** (2 nodes): `Bring Your Own LLMs`, `BYOK Architecture`
+- **Thin community `Community 87`** (2 nodes): `AGENTS.md`, `CLAUDE.md`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Page Agent`** (2 nodes): `Page Agent`, `Page Agent Chinese README`
+- **Thin community `Community 88`** (2 nodes): `Bring Your Own LLMs`, `BYOK Architecture`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `create Card`** (2 nodes): `createCard()`, `escapeHtml()`
+- **Thin community `Community 89`** (2 nodes): `Page Agent`, `Page Agent Chinese README`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Client Side Web Enhancement`** (2 nodes): `Client-Side Web Enhancement`, `execute_task MCP Tool`
+- **Thin community `Community 90`** (2 nodes): `createCard()`, `escapeHtml()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `agents source first publish workflow`** (2 nodes): `agents_source_first_publish_workflow`, `Source-First Publish Workflow`
+- **Thin community `Community 91`** (2 nodes): `Client-Side Web Enhancement`, `execute_task MCP Tool`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Private Vulnerability Reporting`** (2 nodes): `Private Vulnerability Reporting`, `Rationale: Avoid Public Exploit Details`
+- **Thin community `Community 92`** (2 nodes): `agents_source_first_publish_workflow`, `Source-First Publish Workflow`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SP Routes for Git Hub`** (2 nodes): `Rationale: GitHub Pages SPA Route Copies`, `SPA Routes for GitHub Pages`
+- **Thin community `Community 93`** (2 nodes): `Private Vulnerability Reporting`, `Rationale: Avoid Public Exploit Details`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `eslint config`** (1 nodes): `eslint.config.js`
+- **Thin community `Community 94`** (2 nodes): `Rationale: GitHub Pages SPA Route Copies`, `SPA Routes for GitHub Pages`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `build`** (1 nodes): `build.js`
+- **Thin community `Community 95`** (1 nodes): `eslint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `pre publish`** (1 nodes): `pre-publish.js`
+- **Thin community `Community 96`** (1 nodes): `build.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `post publish`** (1 nodes): `post-publish.js`
+- **Thin community `Community 97`** (1 nodes): `pre-publish.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `build libs`** (1 nodes): `build-libs.js`
+- **Thin community `Community 98`** (1 nodes): `post-publish.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (1 nodes): `vite.config.js`
+- **Thin community `Community 99`** (1 nodes): `build-libs.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `env d`** (1 nodes): `env.d.ts`
+- **Thin community `Community 100`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `index`** (1 nodes): `index.ts`
+- **Thin community `Community 101`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `types`** (1 nodes): `types.ts`
+- **Thin community `Community 102`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `locales`** (1 nodes): `locales.ts`
+- **Thin community `Community 103`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (1 nodes): `vite.config.js`
+- **Thin community `Community 104`** (1 nodes): `locales.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `env d`** (1 nodes): `env.d.ts`
+- **Thin community `Community 105`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `types`** (1 nodes): `types.ts`
+- **Thin community `Community 106`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `wxt config`** (1 nodes): `wxt.config.js`
+- **Thin community `Community 107`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `globals d`** (1 nodes): `globals.d.ts`
+- **Thin community `Community 108`** (1 nodes): `wxt.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `markdown d`** (1 nodes): `markdown.d.ts`
+- **Thin community `Community 109`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `assets d`** (1 nodes): `assets.d.ts`
+- **Thin community `Community 110`** (1 nodes): `ProductDockCard.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `History Detail`** (1 nodes): `HistoryDetail.tsx`
+- **Thin community `Community 111`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `sonner`** (1 nodes): `sonner.tsx`
+- **Thin community `Community 112`** (1 nodes): `AmazonExtractedProduct.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `switch`** (1 nodes): `switch.tsx`
+- **Thin community `Community 113`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `tailwind config`** (1 nodes): `tailwind.config.js`
+- **Thin community `Community 114`** (1 nodes): `ProductExtractor.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `main`** (1 nodes): `main.tsx`
+- **Thin community `Community 115`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `env d`** (1 nodes): `env.d.ts`
+- **Thin community `Community 116`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `constants`** (1 nodes): `constants.ts`
+- **Thin community `Community 117`** (1 nodes): `ToolContext.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `API Reference`** (1 nodes): `APIReference.tsx`
+- **Thin community `Community 118`** (1 nodes): `ToolResultEnvelope.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Header`** (1 nodes): `Header.tsx`
+- **Thin community `Community 119`** (1 nodes): `ResultCardUpdate.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Code Editor`** (1 nodes): `CodeEditor.tsx`
+- **Thin community `Community 120`** (1 nodes): `SourcePlatform.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `aurora text`** (1 nodes): `aurora-text.tsx`
+- **Thin community `Community 121`** (1 nodes): `ConversationMessage.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `sonner`** (1 nodes): `sonner.tsx`
+- **Thin community `Community 122`** (1 nodes): `ResultCard.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `switch`** (1 nodes): `switch.tsx`
+- **Thin community `Community 123`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `One More Thing Section`** (1 nodes): `OneMoreThingSection.tsx`
+- **Thin community `Community 124`** (1 nodes): `ResultCardType.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Scenarios Section`** (1 nodes): `ScenariosSection.tsx`
+- **Thin community `Community 125`** (1 nodes): `NormalizedProductSnapshot.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Features Section`** (1 nodes): `FeaturesSection.tsx`
+- **Thin community `Community 126`** (1 nodes): `globals.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Layout`** (1 nodes): `Layout.tsx`
+- **Thin community `Community 127`** (1 nodes): `markdown.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 128`** (1 nodes): `assets.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 129`** (1 nodes): `HistoryDetail.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 130`** (1 nodes): `sonner.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 131`** (1 nodes): `switch.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 132`** (1 nodes): `tailwind.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `page`** (1 nodes): `page.tsx`
+- **Thin community `Community 133`** (1 nodes): `main.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `index`** (1 nodes): `index.js`
+- **Thin community `Community 134`** (1 nodes): `env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite iife config`** (1 nodes): `vite.iife.config.js`
+- **Thin community `Community 135`** (1 nodes): `constants.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (1 nodes): `vite.config.js`
+- **Thin community `Community 136`** (1 nodes): `APIReference.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `demo`** (1 nodes): `demo.ts`
+- **Thin community `Community 137`** (1 nodes): `Header.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `env d`** (1 nodes): `env.d.ts`
+- **Thin community `Community 138`** (1 nodes): `CodeEditor.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (1 nodes): `vite.config.js`
+- **Thin community `Community 139`** (1 nodes): `aurora-text.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `types`** (1 nodes): `types.ts`
+- **Thin community `Community 140`** (1 nodes): `sonner.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `constants`** (1 nodes): `constants.ts`
+- **Thin community `Community 141`** (1 nodes): `switch.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `vite config`** (1 nodes): `vite.config.js`
+- **Thin community `Community 142`** (1 nodes): `OneMoreThingSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `env d`** (1 nodes): `env.d.ts`
+- **Thin community `Community 143`** (1 nodes): `ScenariosSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `type`** (1 nodes): `type.ts`
+- **Thin community `Community 144`** (1 nodes): `FeaturesSection.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `index d`** (1 nodes): `index.d.ts`
+- **Thin community `Community 145`** (1 nodes): `Layout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `agents dom pipeline`** (1 nodes): `agents_dom_pipeline`
+- **Thin community `Community 146`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `agents page controller package`** (1 nodes): `agents_page_controller_package`
+- **Thin community `Community 147`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `agents llms package`** (1 nodes): `agents_llms_package`
+- **Thin community `Community 148`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `core prompt indexed interactions`** (1 nodes): `core_prompt_indexed_interactions`
+- **Thin community `Community 149`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `mcp mcp server`** (1 nodes): `mcp_mcp_server`
+- **Thin community `Community 150`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `mcp launcher page`** (1 nodes): `mcp_launcher_page`
+- **Thin community `Community 151`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `mcp websocket hub`** (1 nodes): `mcp_websocket_hub`
+- **Thin community `Community 152`** (1 nodes): `index.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `agents monorepo workspaces`** (1 nodes): `agents_monorepo_workspaces`
+- **Thin community `Community 153`** (1 nodes): `vite.iife.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `developer guide local development`** (1 nodes): `developer_guide_local_development`
+- **Thin community `Community 154`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Testing AP Extension`** (1 nodes): `Testing API Extension`
+- **Thin community `Community 155`** (1 nodes): `demo.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SP Git Hub Pages`** (1 nodes): `SPA GitHub Pages`
+- **Thin community `Community 156`** (1 nodes): `env.d.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 157`** (1 nodes): `vite.config.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 158`** (1 nodes): `types.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 159`** (1 nodes): `constants.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 160`** (1 nodes): `vite.config.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 161`** (1 nodes): `env.d.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 162`** (1 nodes): `type.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 163`** (1 nodes): `index.d.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 164`** (1 nodes): `agents_dom_pipeline`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 165`** (1 nodes): `agents_page_controller_package`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 166`** (1 nodes): `agents_llms_package`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 167`** (1 nodes): `core_prompt_indexed_interactions`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 168`** (1 nodes): `mcp_mcp_server`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 169`** (1 nodes): `mcp_launcher_page`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 170`** (1 nodes): `mcp_websocket_hub`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 171`** (1 nodes): `agents_monorepo_workspaces`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 172`** (1 nodes): `developer_guide_local_development`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 173`** (1 nodes): `Testing API Extension`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 174`** (1 nodes): `SPA GitHub Pages`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PageController` connect `DOM Actions And Mask` to `Page State Serialization`, `Core Agent Loop`, `Hub Bridge And Theme`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **Why does `PageAgentDocs()` connect `UI Panel And I18n` to `Website Documentation`, `Core Agent Loop`, `Hub Bridge And Theme`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **Why does `clear()` connect `Page State Serialization` to `Session History Storage`, `Console Execution Tool`?**
+- **Why does `PageController` connect `Community 1` to `Community 4`, `Community 5`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `PageAgentDocs()` connect `Community 0` to `Community 9`, `Community 4`, `Community 5`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `clear()` connect `Community 1` to `Community 8`, `Community 11`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **What connects `Text-Based DOM Manipulation`, `Free Testing LLM API`, `MIT License` to the rest of the system?**
   _68 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `UI Panel And I18n` be split into smaller, more focused modules?**
+- **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07 - nodes in this community are weakly interconnected._
-- **Should `Extension Remote Controller` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `Monorepo Architecture` be split into smaller, more focused modules?**
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._

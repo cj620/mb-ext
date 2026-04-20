@@ -1,6 +1,8 @@
 import { History, Send, Settings, Square } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import { useCommerceAgent } from '@/commerce/features/useCommerceAgent'
+import { ResultCardDock } from '@/commerce/ui'
 import { ConfigPanel } from '@/components/ConfigPanel'
 import { HistoryDetail } from '@/components/HistoryDetail'
 import { HistoryList } from '@/components/HistoryList'
@@ -30,6 +32,7 @@ export default function App() {
 	const textareaRef = useRef<HTMLTextAreaElement>(null)
 
 	const { status, history, activity, currentTask, config, execute, stop, configure } = useAgent()
+	const commerceState = useCommerceAgent()
 
 	// Persist session when task finishes
 	const prevStatusRef = useRef(status)
@@ -189,6 +192,12 @@ export default function App() {
 					{activity && <ActivityCard activity={activity} />}
 				</div>
 			</main>
+
+			{view.name === 'chat' && commerceState.activeResultCard && (
+				<section className="border-t px-3 py-2">
+					<ResultCardDock activeCard={commerceState.activeResultCard} />
+				</section>
+			)}
 
 			{/* Input */}
 			<footer className="border-t p-3">
